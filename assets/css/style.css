@@ -1,0 +1,740 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Página en General */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+.body{
+    display: flex;
+    background-color: white;
+}
+
+
+
+
+
+
+/* TODO EL HEADER */
+.header{
+    position: sticky;
+    top: -1;
+    z-index: 1;
+    align-items: center;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding: 10px 4%;
+    border: 10px;
+    border-color: gray;
+    box-shadow: 0 1px 4px;
+}
+
+.header .nav-links{
+    list-style: none;
+    order: 1;
+}
+
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 10px;
+    
+}
+
+.header .nav-links a{
+    color: black;
+    text-decoration: none;
+}
+
+.header .nav-links li a:hover{
+    color: #820ad1;
+
+}
+
+.header .logo img{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/*                           Todo el BODY                       */
+.separacion-contenido{
+    padding: 50px;
+}
+
+
+.no-accion{
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+
+/* Diseños para Textos */
+.texto-centrado{
+    text-align: center;
+}
+
+.item-centrado{
+    text-align: center;
+    align-items: center;
+
+}
+
+.texto-resaltado-negro{
+    font-weight: 630;
+    color: black;
+}
+
+.texto-resaltado-morado{
+    font-weight: 630;
+    background: linear-gradient(90deg, rgb(159, 45, 235), rgb(81, 0, 135)) text;
+    -webkit-text-fill-color: transparent;
+}
+
+.enlaces{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+/*     Banner     */
+.banner-principal{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.items-alineados-banner{
+    top: 13%;
+    left: 8%;
+}
+
+.banner-texto-grande{
+    color: white;
+    position: absolute;
+
+}
+
+.banner-texto-grande .texto-negrita-banner{
+    font-weight: 600;
+    font-size: 55px;
+    text-align: left;
+}
+
+.banner-principal .texto-chico-banner{
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: left;
+    position: absolute;
+}
+
+.banner-principal .logo-banner{
+    position: absolute;
+    top: 6%;
+    left: 55%;
+    
+}
+
+.resaltar-texto-banner{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    color: #820ad1;
+    font-weight: 600;
+    font-size: 20px;
+    position: left;
+}
+
+.extra-banner{
+    position: absolute;
+    align-items: left;
+    padding: 0;
+    margin: 0;
+}
+
+.boton-banner{
+    top: 150%;
+    left: -2%;
+}
+
+.boton2-banner{
+    top: 183%;
+    left: 0%;
+}
+
+
+
+
+
+
+
+/* Botón */
+
+
+.btn button{
+    margin: 0px;
+    padding: 12px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    justify-content: center;
+    border: none;
+    border-radius: 50px;
+    outline: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+    box-shadow: rgba(0, 0, 0, 0.5) 1px 4px 16px -6px;
+    background: linear-gradient(99.92deg, rgb(159, 45, 235) 18.57%, rgb(98, 0, 163) 71.77%), linear-gradient(0deg, rgb(45, 185, 101), rgb(45, 185, 101));
+}
+
+
+.btn button:hover{
+    background: linear-gradient(99.92deg, rgb(159, 45, 235) 18.57%, rgb(98, 0, 163) 100%), linear-gradient(0deg, rgb(45, 185, 101), rgb(45, 185, 101));
+}
+
+
+.btn2 button{
+    margin: 0px;
+    padding: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    justify-content: center;
+    border: none;
+    border-radius: 50px;
+    outline: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+    box-shadow: rgba(0, 0, 0, 0.5) 1px 4px 16px -6px;
+    background: white;
+    opacity: 0 40px;
+}
+
+
+.btn-cuadrado button{
+    margin: 0px;
+    margin-top: 15px;
+    padding: 15px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    outline: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+    box-shadow: rgba(0, 0, 0, 0.5) 1px 4px 16px -6px;
+    background: linear-gradient(99.92deg, rgb(159, 45, 235) 18.57%, rgb(98, 0, 163) 71.77%), linear-gradient(0deg, rgb(45, 185, 101), rgb(45, 185, 101));
+}
+
+.btn-cuadrado button:hover{
+    background: linear-gradient(99.92deg, rgb(159, 45, 235) 18.57%, rgb(98, 0, 163) 100%), linear-gradient(0deg, rgb(45, 185, 101), rgb(45, 185, 101));
+}
+
+
+
+
+
+
+
+/* Centro del Body  */
+
+.caja-reviews{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content:center;
+    
+}
+
+.centrados-separacion{
+    text-align: center;
+    justify-content: center;
+    display:inline-block;
+    padding: 0 10px;
+}
+
+
+
+
+
+
+/* Reviews Info y Cajita Gris*/
+
+.reviews-info-banner{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    left: 12%;
+}
+
+.cajita-gris-reviews{
+    
+    display: inline-block;
+    text-align: center;
+    border-radius: 12px;
+    background-color: rgb(248, 248, 250);
+    flex-direction: column;
+    margin-top: 0%;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding: 60px 42px 42px;
+    z-index: 2;
+    color: black;
+    width: 40%;
+    height: 40%;
+}
+
+.cuadro-gris-altura{
+    top: 30%;
+    left: 7%;
+}
+
+.banner-info-posicion{
+    color: white;
+    position: absolute;
+}
+
+
+
+
+/*  Texto remarcado de morado   */
+
+.marcado-morado{
+    background-color: #820ad1;
+    color: white;
+    border-radius: 5px;
+}
+
+
+
+
+
+/*  Cajita Morada   */
+
+.cajita-morada-reviews{
+
+    display: inline-block;
+    text-align: center;
+    border-radius: 12px;
+    background: linear-gradient(137.07deg, rgb(159, 45, 235) 42.83%, rgb(98, 0, 163) 86.85%);
+    flex-direction: column;
+    margin-top: 0%;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding: 30px 42px 42px;
+    z-index: 2;
+    color: white;
+    width: 25%;
+    height: 30%;
+    box-shadow: rgba(0, 0, 0, 0.5) 00px 0px 50px -20px;
+}
+
+.resaltar-texto-cajita-morada{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    color: #820ad1;
+    font-weight: 600;
+    font-size: 25px;
+    position: left;
+}
+
+.btn-cajita-morada button{
+    margin: 0px;
+    padding: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    outline: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+    box-shadow: rgba(0, 0, 0, 0.5) 1px 4px 16px -6px;
+    background: white;
+    opacity: 0 40px;
+}
+
+
+
+
+
+
+
+/*  Cajita Blanca  */
+
+.cajita-blanca-reviews{
+    display: inline-block;
+    text-align: center;
+    border-radius: 12px;
+    background: white;
+    flex-direction: column;
+    margin-top: 0%;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding: 30px 42px 42px;
+    z-index: 2;
+    color: black;
+    width: 25%;
+    height: 30%;
+    box-shadow: rgba(0, 0, 0, 0.5) 00px 0px 50px -20px;
+}
+
+.resaltar-texto-cajita-blanca{
+    background-color: #820ad1;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    font-size: 25px;
+    position: left;
+}
+
+.btn-cajita-blanca button{
+    color: white;
+    margin: 0px;
+    padding: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    outline: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+    box-shadow: rgba(0, 0, 0, 0.5) 1px 4px 16px -6px;
+    background: linear-gradient(99.92deg, rgb(159, 45, 235) 18.57%, rgb(98, 0, 163) 71.77%), linear-gradient(0deg, rgb(45, 185, 101), rgb(45, 185, 101));
+    opacity: 0 40px;
+}
+
+.btn-cajita-blanca button:hover{
+    background: linear-gradient(99.92deg, rgb(159, 45, 235) 18.57%, rgb(98, 0, 163) 100%), linear-gradient(0deg, rgb(45, 185, 101), rgb(45, 185, 101));
+}
+
+
+.subtitulo-cajita{
+    font-size: 4;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+
+/*    Formulario Diseño     */    
+
+.formulario-todo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario-estilo input{
+    color: #000000;
+    border: 10px;
+    width: 300px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: #f4f5f8;
+}
+
+.formulario-estilo input:focus{
+    outline-color : #820ad1!important;
+}
+
+
+.formulario-estilo textarea{
+    color: #000000;
+    border: 10px;
+    width: 630px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: #f4f5f8;
+}
+
+
+.formulario-estilo textarea:focus{
+    outline-color : #820ad1!important;
+}
+
+.btn-form button{
+    margin: 0px;
+    margin-top: 15px;
+    padding: 15px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    outline: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+    box-shadow: rgba(0, 0, 0, 0.5) 1px 4px 16px -6px;
+    background: linear-gradient(99.92deg, rgb(159, 45, 235) 18.57%, rgb(98, 0, 163) 71.77%), linear-gradient(0deg, rgb(45, 185, 101), rgb(45, 185, 101));
+}
+
+.btn-form button:hover{
+    background: linear-gradient(99.92deg, rgb(159, 45, 235) 18.57%, rgb(98, 0, 163) 100%), linear-gradient(0deg, rgb(45, 185, 101), rgb(45, 185, 101));
+}
+
+
+
+
+
+
+
+
+
+/* TOPS Sección */
+
+.banner-tops{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.items-alineados-tops{
+    top: 13%;
+    left: 8%;
+}
+
+.topsbanner-texto-grande{
+    color: white;
+    position: absolute;
+
+}
+
+.topsbanner-texto-grande .texto-negrita-tops{
+    font-weight: 600;
+    font-size: 55px;
+    text-align: left;
+}
+
+.banner-tops .texto-chico-tops{
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: left;
+    position: absolute;
+}
+
+.banner-tops .logo-tops{
+    position: absolute;
+    top: 3.5%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+}
+
+.banner-tops .top-paypal-centrado form{
+    margin-left: 20%;
+}
+
+
+.resaltar-texto-tops{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    color: #820ad1;
+    font-weight: 600;
+    font-size: 20px;
+    position: left;
+}
+
+.extra-tops{
+    position: absolute;
+    align-items: left;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*       Ventanas Flotantes       */
+
+dialog::backdrop{
+    background: rgba(0, 0, 0, 0.9);
+}
+
+dialog{
+
+    text-align: center;
+    border-radius: 12px;
+    border: 0px;
+    background-color: rgb(255, 255, 255);
+    flex-direction: column;
+    margin-top: 0%;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding: 60px 42px 42px;
+    z-index: 2;
+    color: black;
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+}
+
+dialog form{
+    align-items: left;
+    text-align: left;
+}
+
+.btn-form button{
+    margin: 0px;
+    margin-top: 15px;
+    padding: 15px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    outline: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+    box-shadow: rgba(0, 0, 0, 0.5) 1px 4px 16px -6px;
+    background: linear-gradient(99.92deg, rgb(159, 45, 235) 18.57%, rgb(98, 0, 163) 71.77%), linear-gradient(0deg, rgb(45, 185, 101), rgb(45, 185, 101));
+}
+
+.btn-form button:hover{
+    background: linear-gradient(99.92deg, rgb(159, 45, 235) 18.57%, rgb(98, 0, 163) 100%), linear-gradient(0deg, rgb(45, 185, 101), rgb(45, 185, 101));
+}
+
+
+dialog form{
+    margin-left: 42%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*                         Footer                            */
+.fondo-footer{
+    font-size: 18px;
+    background-color: #282828;
+    width: 100%;
+    height: 100%;
+    color: white;
+    top: -30%;
+    z-index: 1;
+    align-items:baseline;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    box-shadow: 0 1px 4px;
+}
+
+.fondo-footer .footer-links{
+    list-style: none;
+    order: 1;
+}
+
+
+
+.btn-subrayado-footer{
+    margin: 0px;
+    border-bottom: 2px solid white;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0.5rem 0px;
+    height: 35px;
+    width: 250px;
+    background-color: transparent;
+    text-align: left;
+    cursor: pointer;
+    color: white;
+}
+
+.btn2-subrayado-footer{
+    color: white;
+    background-color: transparent;
+    box-sizing: border-box;
+    margin: 0px;
+    -webkit-font-smoothing: antialiased;
+    appearance: none;
+    text-size-adjust: 100%;
+    border: 0px;
+    font-weight: inherit;
+    outline: 0px;
+    padding: 0px;
+    text-rendering: optimizelegibility;
+}
+
+.separacion-a-footer{
+    padding: 10px;
+}
+
+.enlaces-footer{
+    color: white;
+    font-weight: 600;
+}
+
+.separacion-redes-footer{
+    display: inline-block;
+    list-style: none;
+}
+
+.separacion-redes-footer a{
+    margin: 10px;
+}
+
