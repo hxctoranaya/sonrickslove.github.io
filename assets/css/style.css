@@ -133,6 +133,12 @@
 
 
 
+/*     Diseño para imágenes    */
+
+.imagen-redonda{
+    border-radius: 50px;
+}
+
 
 
 
