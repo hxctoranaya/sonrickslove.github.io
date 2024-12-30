@@ -99,3 +99,77 @@ u{
     height: 60px;
     color: #ffffff;
 }
+
+/*      Boton Redes       */
+
+.btn-img-redes-instagram{
+    border: 0px;
+    background-color: #ffffff;
+    background-image: url("/article-minecraft/insta_boton.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 240px;
+    height: 70px;
+    color: #ffffff;
+}
+
+.btn-img-redes-x{
+    border: 0px;
+    background-color: #ffffff;
+    background-image: url("/article-minecraft/x_boton.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 240px;
+    height: 70px;
+    color: #ffffff;
+}
+
+.btn-img-redes-facebook{
+    border: 0px;
+    background-color: #ffffff;
+    background-image: url("/article-minecraft/facebook_boton.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 240px;
+    height: 70px;
+    color: #ffffff;
+}
+
+.btn-img-redes-youtube{
+    border: 0px;
+    background-color: #ffffff;
+    background-image: url("/article-minecraft/youtube_logo.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 240px;
+    height: 70px;
+    color: #ffffff;
+}
+
+.btn-img-redes-youtube2{
+    border: 0px;
+    background-color: #ffffff;
+    background-image: url("/article-minecraft/youtube2_logo.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 240px;
+    height: 70px;
+    color: #ffffff;
+}
+
+.btn-img-redes-tiktok{
+    border: 0px;
+    background-color: #ffffff;
+    background-image: url("/article-minecraft/tiktok_logo.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 240px;
+    height: 70px;
+    color: #ffffff;
+}
