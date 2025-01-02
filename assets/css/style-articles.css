@@ -76,7 +76,7 @@ u{
 
 
 
-/*      Boton       */
+/*      Botones personalizados       */
 
 .btn-img{
     border: 0px;
@@ -92,6 +92,28 @@ u{
 .btn-img:hover{
     border: 0px;
     background-image: url("../img/Boton-Pagina-IMG2.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 246px;
+    height: 60px;
+    color: #ffffff;
+}
+
+.btn-img-naranja{
+    border: 0px;
+    background-image: url("../img/Boton-Pagina-Naranja-IMG.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 246px;
+    height: 60px;
+    color: #ffffff;
+}
+
+.btn-img-naranja:hover{
+    border: 0px;
+    background-image: url("../img/Boton-Pagina-Naranja2-IMG.png");
     background-repeat: no-repeat;
     background-position:center;
     background-size: 100%;
