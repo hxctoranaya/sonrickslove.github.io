@@ -122,6 +122,28 @@ u{
     color: #ffffff;
 }
 
+.btn-img-verde{
+    border: 0px;
+    background-image: url("../img/Boton-Pagina-IMG-Verde.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 246px;
+    height: 60px;
+    color: #ffffff;
+}
+
+.btn-img-verde:hover{
+    border: 0px;
+    background-image: url("../img/Boton-Pagina-IMG-Verde2.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 246px;
+    height: 60px;
+    color: #ffffff;
+}
+
 /*      Boton Redes       */
 
 .btn-img-redes-instagram{
