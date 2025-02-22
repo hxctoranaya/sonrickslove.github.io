@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
+/*              Página en General               */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 70px; /* Ajustado para navbar más pequeño */
+    background: #171615; /* 🔹 Color de fondo de la página */
+}
+
+.fuentetitulos {
+    font-family: "Minecrafter", sans-serif;
+    src: url(/assets/fonts/Minecrafter.Alt.ttf);
+    color: #ffd953; /* Color principal del texto */
+    text-shadow: 2px 2px 0 #a17319; /* Sombra no difuminada */
+    font-size: 3rem;
+}
+
+.fuentesubtitulos{
+    font-family: "Minecraft";
+    src: url(/assets/fonts/Minecraft.ttf);
+    color: #ffffff;
+}
+
+/*  BOTÓN AMARILLO */
+.btn-amarillo {
+    position: relative; /* Posicionamiento relativo para los colores */
+    display: inline-block; /* Display en línea */
+    text-align: center; /* Alineación centrada del texto */
+    color: #000000; /* Color del texto en negro */
+    font-family: Arial, sans-serif; /* Familia de fuente */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+    width: 230px; /* Ancho del botón */
+    height: 60px; /* Altura del botón */
+    text-decoration: none; /* Sin subrayado */
+    line-height: 60px; /* Altura de línea igual a la altura del botón para centrar el texto verticalmente */
+    cursor: pointer; /* Cursor de puntero al pasar por encima */
+    background-color: #FFC42B; /* Color del centro inicial */
+    box-sizing: border-box; /* Asegura que el borde no altere el tamaño total */
+    border: 2px solid #000000; /* Borde negro de 2px usando border */
+    z-index: 0; /* Asegura que el borde esté detrás de los pseudo-elementos */
+}
+
+.btn-amarillo::before,
+.btn-amarillo::after,
+.btn-amarillo span {
+    position: absolute; /* Posicionamiento absoluto para los colores */
+    left: 0;
+    right: 0;
+}
+
+.btn-amarillo::before {
+    content: "";
+    top: 0;
+    height: 10%;
+    background-color: #FFD953; /* Color superior */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del span */
+}
+
+.btn-amarillo::after {
+    content: "";
+    bottom: 0;
+    height: 10%;
+    background-color: #DB9F21; /* Color inferior */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del span */
+}
+
+.btn-amarillo span {
+    top: 10%;
+    bottom: 10%;
+    background-color: #FFC42B; /* Color del centro */
+    z-index: 1; /* Coloca el texto encima de los colores */
+    display: flex; /* Utiliza flexbox para centrar el texto */
+    justify-content: center; /* Centro horizontal */
+    align-items: center; /* Centro vertical */
+    color: #000000; /* Asegura que el texto sea negro */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Asegura que el texto sea negrita */
+}
+
+.btn-amarillo:hover span {
+    background-color: #FFE175; /* Cambia el color del centro al pasar el cursor */
+}
+
+
+
+
+
+/*              Navbar              */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(38, 36, 35, 0.6); /* 🔹 Opacidad añadida */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    border-bottom: 1px solid black;
+    box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* LOGO IZQUIERDO */
+.navbar-left .logo {
+    height: 50px;
+}
+
+/* MENÚ CENTRADO */
+.navbar-center {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar-center li {
+    display: inline-block;
+}
+
+.navbar-center li a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px; /* 🔹 Cambiado a tamaño 12px */
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navbar-center li a:hover {
+    color: #f0a500;
+}
+
+/* ÍCONOS Y TEXTO A LA DERECHA */
+.navbar-right {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px; /* 🔹 Cambiado a tamaño 12px */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navbar-right a:hover {
+    color: #f0a500;
+}
+
+/* ESTILO DE ICONOS */
+.navbar-right i {
+    font-size: 12px; /* 🔹 Cambiado a tamaño 12px */
+}
+
+/*  BOTÓN DE NAVBAR */
+.btn-nav {
+    position: relative; /* Posicionamiento relativo para los colores */
+    display: inline-block; /* Display en línea */
+    text-align: center; /* Alineación centrada del texto */
+    color: #000000; /* Color del texto en negro */
+    font-family: Arial, sans-serif; /* Familia de fuente */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+    width: 230px; /* Ancho del botón */
+    height: 60px; /* Altura del botón */
+    text-decoration: none; /* Sin subrayado */
+    line-height: 60px; /* Altura de línea igual a la altura del botón para centrar el texto verticalmente */
+    cursor: pointer; /* Cursor de puntero al pasar por encima */
+    background-color: #FFC42B; /* Color del centro inicial */
+    box-sizing: border-box; /* Asegura que el borde no altere el tamaño total */
+    border: 2px solid #000000; /* Borde negro de 2px usando border */
+    z-index: 0; /* Asegura que el borde esté detrás de los pseudo-elementos */
+}
+
+.btn-nav::before,
+.btn-nav::after,
+.btn-nav span {
+    position: absolute; /* Posicionamiento absoluto para los colores */
+    left: 0;
+    right: 0;
+}
+
+.btn-nav::before {
+    content: "";
+    top: 0;
+    height: 10%;
+    background-color: #FFD953; /* Color superior */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del span */
+}
+
+.btn-nav::after {
+    content: "";
+    bottom: 0;
+    height: 10%;
+    background-color: #DB9F21; /* Color inferior */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del span */
+}
+
+.btn-nav span {
+    top: 10%;
+    bottom: 10%;
+    background-color: #FFC42B; /* Color del centro */
+    z-index: 1; /* Coloca el texto encima de los colores */
+    display: flex; /* Utiliza flexbox para centrar el texto */
+    justify-content: center; /* Centro horizontal */
+    align-items: center; /* Centro vertical */
+    color: #000000; /* Asegura que el texto sea negro */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Asegura que el texto sea negrita */
+}
+
+.btn-nav:hover span {
+    background-color: #FFE175; /* Cambia el color del centro al pasar el cursor */
+}
+
+/*              Fin Navbar              */
+
+
+
+
+
+
+/*              Sección Contratar               */
+#contratar {
+    position: relative;
+    background-image: url('/assets/img/fondo-amarillo-seccion.png'); /* Ruta de la imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    min-height: 800px; /* Altura mínima para asegurar que el contenido quepa */
+    padding: 50px 20px; /* Espaciado interno */
+    text-align: center;
+    color: #000000;
+    overflow: visible; /* Permite que el contenido se desborde si es necesario */
+    box-shadow: 4px 4px 0 black, -4px -4px 0 black; /* Sombra sin difuminar */
+}
+
+.contenido-seccion {
+    position: relative;
+    z-index: 2;
+}
+
+.texto-seccion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* Paquetes contenido */
+.container {
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: 14px; /* Tamaño más pequeño para el texto */
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Contenedor de la tienda */
+.store {
+    display: flex;
+    justify-content: flex-start; /* Alinea las tarjetas a la izquierda */
+    gap: 25px;
+    flex-wrap: nowrap; /* Asegura que las tarjetas no se envuelvan a la siguiente línea */
+    width: 100%; /* Ancho ajustado */
+    margin-left: 0; /* Alinea el contenedor a la izquierda */
+    margin-right: 0; /* Alinea el contenedor a la izquierda */
+    padding: 0; /* Elimina cualquier relleno adicional */
+}
+
+/* Tarjeta general */
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 850px; /* Ancho aumentado */
+    height: 300px; 
+    background-color: #262423; /* Color del Card */
+    border: 2px solid #000000; /* Borde negro */
+    box-shadow: 2px 2px 0 #3c3938, -2px -2px 0 #3c3938; /* Contorno con dos colores */
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    padding: 20px;
+}
+
+/* Tamaño subtítulos de Card */
+.card .extra {
+    font-size: 14px; /* Tamaño de fuente reducido */
+    color: #ffffff; /* Color del texto */
+    margin-top: 10px; /* Espaciado superior */
+}
+
+
+/* Tarjeta Popular */
+.card.popular-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.card.popular {
+    border: 2px solid #bc7c18; /* Borde amarillo */
+    box-shadow: 2px 2px 0 #dfa322, -2px -2px 0 #dfa322; /* Sombra amarilla */
+    background-color: #262423; /* Color de fondo */
+}
+
+/* Badge de Popular */
+.popular-badge {
+    position: absolute;
+    top: -0px;
+    left: 0;
+    width: 100%;
+    background-color: #ffc42b;
+    color: black;
+    font-family: 'Minecraft', sans-serif;
+    text-align: center;
+    padding: 5px 0;
+    border: 2px solid #3d2910;
+    box-shadow: -3px -3px 0 #ffff8b;
+}
+
+/* Icono de la moneda */
+.card .icono-moneda {
+    margin-top: 20px;
+    width: 50px; /* Tamaño del icono */
+    height: 50px; /* Tamaño del icono */
+}
+
+/* Número de monedas */
+.card .coins {
+    font-size: 32px; /* Tamaño grande para el número de monedas */
+    font-weight: bold;
+    color: #ffffff; /* Color blanco */
+    font-family: 'Minecrafter', sans-serif; /* Fuente Minecrafter */
+}
+
+/* Línea de separación */
+.card .linea-separacion {
+    width: 100%;
+    height: 2px;
+    background-color: #201f1e; /* Color de la línea */
+    box-shadow: 0 2px 0 #3d3a39; /* Sombra sin difuminar */
+    margin: 10px 0;
+}
+
+/* Precio */
+.card .price {
+    font-size: 20px; /* Tamaño del precio */
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Caja de selección */
+.card .checkbox {
+    width: 20px; /* Tamaño del checkbox */
+    height: 20px; /* Tamaño del checkbox */
+    margin-right: 10px; /* Espacio a la derecha del checkbox */
+}
+
+/* Flex container para la caja de selección y el precio */
+.card .price-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilo del contenedor del checkbox personalizado */
+.custom-checkbox {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin-right: 10px; /* Espacio entre el checkbox y el precio */
+}
+
+/* Oculta el checkbox nativo */
+.custom-checkbox input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Estilo del checkmark (cuadrado del checkbox) */
+.checkmark {
+    position: relative; /* Cambiamos a relativo para evitar superposiciones */
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-color: #262423; /* Color de fondo del checkbox */
+    border: 2px solid #000000; /* Borde negro */
+    border-radius: 4px; /* Bordes redondeados */
+    vertical-align: middle; /* Alinea verticalmente con el precio */
+}
+
+/* Cambia el color del checkmark cuando el checkbox está seleccionado */
+.custom-checkbox input[type="checkbox"]:checked ~ .checkmark {
+    background-color: #FFC42B; /* Color amarillo */
+    border-color: #FFC42B; /* Borde amarillo */
+}
+
+/* Estilo del "tick" (marca de verificación) */
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid black; /* Cambiamos el color a negro */
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Muestra el "tick" cuando el checkbox está seleccionado */
+.custom-checkbox input[type="checkbox"]:checked ~ .checkmark::after {
+    display: block;
+}
+
+/* Alineación del precio */
+.price {
+    display: inline-block;
+    vertical-align: middle; /* Alinea verticalmente con el checkbox */
+    margin-left: 10px; /* Espacio entre el checkbox y el precio */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Imágenes del contenedor */
+.imagenes-seccion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.personaje-izquierda {
+    position: absolute;
+    left: -2%; /* Ajuste según tus valores */
+    bottom: -10%; /* Ajuste según tus valores */
+    max-width: 20%; /* Limita el tamaño para que no se desborde */
+}
+
+.personaje-derecha {
+    position: absolute;
+    right: -7%; /* Ajuste según tus valores */
+    bottom: -5%; /* Ajuste según tus valores */
+    max-width: 20%; /* Limita el tamaño para que no se desborde */
+}
+
+.personaje-superior {
+    position: absolute;
+    top: 5%; /* Ajuste según tus valores */
+    right: 10%; /* Ajuste según tus valores */
+    max-width: 20%; /* Limita el tamaño para que no se desborde */
+    transform: none; /* Elimina el transform que lo centraba */
+}
+
+
