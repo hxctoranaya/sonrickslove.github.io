@@ -517,6 +517,7 @@ body {
     z-index: 1000; /* Asegura que esté por encima de todo */
     justify-content: center;
     align-items: center;
+    overflow: auto; /* Permite el scroll si el contenido es muy largo */
 }
 
 /* Contenido de la modal */
@@ -533,6 +534,7 @@ body {
     flex-direction: column;
     border-radius: 0; /* Esquinas rectas */
     z-index: 1001; /* Asegura que el contenido esté por encima del fondo oscuro */
+    margin: 20px auto; /* Centra el contenido */
 }
 
 /* Contenedor flexible para las dos columnas */
