@@ -48,7 +48,7 @@ body {
     cursor: pointer; /* Cursor de puntero al pasar por encima */
     background-color: #FFC42B; /* Color del centro inicial */
     box-sizing: border-box; /* Asegura que el borde no altere el tamaño total */
-    border: 2px solid #000000; /* Borde negro de 2px usando border */
+    border: 2px solid #080707; /* Borde negro de 2px usando border */
     z-index: 0; /* Asegura que el borde esté detrás de los pseudo-elementos */
 }
 
@@ -496,5 +496,129 @@ body {
     max-width: 20%; /* Limita el tamaño para que no se desborde */
     transform: none; /* Elimina el transform que lo centraba */
 }
+
+
+
+
+
+
+
+
+/*              Estilo de la modal              */
+
+.modal {
+    display: none; /* Oculta la modal por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con 50% de transparencia */
+    z-index: 1000; /* Asegura que esté por encima de todo */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenido de la modal */
+.modal-content {
+    background-color: #262423; /* Color de fondo del contenido */
+    padding: 20px;
+    border: 2px solid #bc7c18; /* Borde amarillo */
+    box-shadow: 2px 2px 0 #dfa322, -2px -2px 0 #dfa322; /* Sombra amarilla */
+    width: 90%;
+    max-width: 900px; /* Ancho máximo de la modal */
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0; /* Esquinas rectas */
+}
+
+/* Contenedor flexible para las dos columnas */
+.modal-columns {
+    display: flex;
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+/* Columna izquierda */
+.modal-left {
+    flex: 1; /* Ocupa el 50% del espacio */
+    text-align: left;
+}
+
+/* Columna derecha */
+.modal-right {
+    flex: 1; /* Ocupa el 50% del espacio */
+    text-align: left;
+}
+
+/* Título de la modal */
+.modal-content h1 {
+    font-size: 2rem;
+    color: #ffd953; /* Color amarillo */
+    text-shadow: 2px 2px 0 #a17319; /* Sombra */
+    margin-bottom: 10px;
+    text-align: center; /* Título centrado */
+}
+
+/* Subtítulo de la modal */
+.modal-content p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: inherit; /* Usa la fuente predeterminada de la página */
+    font-weight: normal; /* No es negrita */
+}
+
+/* Título "Pago por PayPal" con la clase .fuentesubtitulos */
+.modal-content .fuentesubtitulos {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Lista de reviews */
+.modal-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.modal-list li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* Iframe de Google Docs */
+.fechas-ajustes {
+    width: 100%;
+    height: 300px;
+    border: none;
+    margin-bottom: 20px;
+}
+
+/* Botón para cerrar la modal */
+#close-modal,
+#close-modal-youtube {
+    margin-top: 20px;
+    background-color: #FFC42B; /* Color amarillo */
+    color: #000000; /* Texto negro */
+    border: 2px solid #000000;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    display: block; /* Hace que el botón ocupe toda la línea */
+    margin-left: auto; /* Centra el botón horizontalmente */
+    margin-right: auto; /* Centra el botón horizontalmente */
+}
+
+#close-modal:hover,
+#close-modal-youtube:hover {
+    background-color: #FFE175; /* Cambia el color al pasar el cursor */
+}
+
+
+/*              FIN Estilo de la modal              */
 
 

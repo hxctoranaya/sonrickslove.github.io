@@ -122,7 +122,7 @@
                 </div>
                 <br>
                 <br>
-                <a href="#contratar" class="btn-nav"><span>Solicitar Review</span></a>
+                <a class="btn-amarillo"><span>Solicitar Review</span></a>
                 <br>
                 <br>
                 <br>
@@ -181,30 +181,332 @@
 
 
 
-    <script>
-        // Verifica que el script se esté cargando
-        console.log("El script en el HTML se ha cargado correctamente.");
+
+    <!--                Ventanas Modales               -->
+
+    <div id="modal-tiktok" class="modal">
+        <div class="modal-content">
+            <!-- Título centrado -->
+            <h1 class="fuentetitulos" style="text-align: center;">Review para TikTok</h1>
     
-        // Selecciona todos los checkboxes con el nombre "review-option"
+            <!-- Contenedor flexible para las dos columnas -->
+            <div class="modal-columns">
+                <!-- Columna izquierda -->
+                <div class="modal-left">
+                    <!-- Subtítulo -->
+                    <p>Calendario para las Reviews, verifica las fechas disponibles</p>
+    
+                    <!-- Lista de Reviews -->
+                    <ul class="modal-list">
+                        <li style="color: #ffa8ee;">➤ Reviews para TikTok (1 Minuto)</li>
+                        <li style="color: #00ffd8;">➤ Reviews para YouTube (4 - 5 Minutos)</li>
+                        <li style="color: #ff3290;">➤ Reviews para YouTube (8 - 10 Minutos)</li>
+                    </ul>
+    
+                    <!-- Iframe de Google Docs -->
+                    <iframe src="https://docs.google.com/document/d/e/2PACX-1vSNGG_9KJsgKdcdq--ECC1AsPqTvCSEwxLyBsr38nmSMoAO-rRRtZ-nAMi9nsiBY9NV29hODRi6XqDO/pub?embedded=true" class="fechas-ajustes"></iframe>
+                </div>
+    
+                <!-- Columna derecha -->
+                <div class="modal-right">
+                    <!-- Título "Pago por PayPal" -->
+                    <h2 class="fuentesubtitulos">Pago por PayPal</h2>
+    
+                    <!-- Subtítulo sobre la comisión -->
+                    <p>La comisión de PayPal por la Review es de 1.10 USD</p>
+    
+                    <!-- Saltos de línea -->
+                    <br><br>
+    
+                    <!-- Formulario de PayPal -->
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick" />
+                        <input type="hidden" name="hosted_button_id" value="JF4TSS2JB77ZL" />
+                        <table>
+                            <tr>
+                                <td>
+                                    <input type="hidden" name="on0" value="Ingresa tu Discord" />
+                                    Ingresa tu Discord
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" name="os0" maxlength="200" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="hidden" name="on1" value="Fecha Elegida" />
+                                    Fecha Elegida
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" name="os1" maxlength="200" />
+                                </td>
+                            </tr>
+                        </table>
+                        <br>
+                        <input type="hidden" name="currency_code" value="USD" />
+                        <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="PayPal es una forma segura y fácil de pagar en línea." alt="Comprar ahora" />
+                    </form>
+                </div>
+            </div>
+    
+            <!-- Botón para cerrar la modal -->
+            <button id="close-modal" class="btn-amarillo">Cerrar</button>
+        </div>
+    </div>
+
+
+    <!-- Ventana Modal para YouTube Popular -->
+    <div id="modal-youtube" class="modal">
+        <div class="modal-content">
+            <!-- Título centrado -->
+            <h1 class="fuentetitulos" style="text-align: center;">Review para YouTube</h1>
+
+            <!-- Contenedor flexible para las dos columnas -->
+            <div class="modal-columns">
+                <!-- Columna izquierda -->
+                <div class="modal-left">
+                    <!-- Subtítulo -->
+                    <p>Calendario para las Reviews, verifica las fechas disponibles</p>
+
+                    <!-- Lista de Reviews -->
+                    <ul class="modal-list">
+                        <li style="color: #ffa8ee;">➤ Reviews para TikTok (1 Minuto)</li>
+                        <li style="color: #00ffd8;">➤ Reviews para YouTube (4 - 5 Minutos)</li>
+                        <li style="color: #ff3290;">➤ Reviews para YouTube (8 - 10 Minutos)</li>
+                    </ul>
+
+                    <!-- Iframe de Google Docs -->
+                    <iframe src="https://docs.google.com/document/d/e/2PACX-1vSNGG_9KJsgKdcdq--ECC1AsPqTvCSEwxLyBsr38nmSMoAO-rRRtZ-nAMi9nsiBY9NV29hODRi6XqDO/pub?embedded=true" class="fechas-ajustes"></iframe>
+                </div>
+
+                <!-- Columna derecha -->
+                <div class="modal-right">
+                    <!-- Título "Pago por PayPal" -->
+                    <h2 class="fuentesubtitulos">Pago por PayPal</h2>
+
+                    <!-- Subtítulo sobre la comisión -->
+                    <p>La comisión de PayPal por la Review es de 1.65 USD</p>
+
+                    <!-- Saltos de línea -->
+                    <br><br>
+
+                    <!-- Formulario de PayPal -->
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick" />
+                        <input type="hidden" name="hosted_button_id" value="JPDFLPCAHZM3S" />
+                        <table>
+                            <tr>
+                                <td>
+                                    <input type="hidden" name="on0" value="Ingresa tu Discord" />
+                                    Ingresa tu Discord
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" name="os0" maxlength="200" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="hidden" name="on1" value="Fecha Elegida" />
+                                    Fecha Elegida
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" name="os1" maxlength="200" />
+                                </td>
+                            </tr>
+                        </table>
+                        <input type="hidden" name="currency_code" value="USD" />
+                        <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="PayPal es una forma segura y fácil de pagar en línea." alt="Comprar ahora" />
+                    </form>
+                </div>
+            </div>
+
+            <!-- Botón para cerrar la modal -->
+            <button id="close-modal-youtube" class="btn-amarillo">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- FIN Ventana Modal para YouTube Popular -->
+
+
+    <!-- Ventana Modal para YouTube ($38 USD) -->
+    <!-- Ventana Modal para YouTube ($38 USD) -->
+<div id="modal-youtube-38" class="modal">
+    <div class="modal-content">
+        <!-- Título centrado -->
+        <h1 class="fuentetitulos" style="text-align: center;">Review para YouTube</h1>
+
+        <!-- Contenedor flexible para las dos columnas -->
+        <div class="modal-columns">
+            <!-- Columna izquierda -->
+            <div class="modal-left">
+                <!-- Subtítulo -->
+                <p>Calendario para las Reviews, verifica las fechas disponibles</p>
+
+                <!-- Lista de Reviews -->
+                <ul class="modal-list">
+                    <li style="color: #ffa8ee;">➤ Reviews para TikTok (1 Minuto)</li>
+                    <li style="color: #00ffd8;">➤ Reviews para YouTube (4 - 5 Minutos)</li>
+                    <li style="color: #ff3290;">➤ Reviews para YouTube (8 - 10 Minutos)</li>
+                </ul>
+
+                <!-- Iframe de Google Docs -->
+                <iframe src="https://docs.google.com/document/d/e/2PACX-1vSNGG_9KJsgKdcdq--ECC1AsPqTvCSEwxLyBsr38nmSMoAO-rRRtZ-nAMi9nsiBY9NV29hODRi6XqDO/pub?embedded=true" class="fechas-ajustes"></iframe>
+            </div>
+
+            <!-- Columna derecha -->
+            <div class="modal-right">
+                <!-- Título "Pago por PayPal" -->
+                <h2 class="fuentesubtitulos">Pago por PayPal</h2>
+
+                <!-- Subtítulo sobre la comisión -->
+                <p>La comisión de PayPal por la Review es de 2.50 USD</p>
+
+                <!-- Saltos de línea -->
+                <br><br>
+
+                <!-- Formulario de PayPal -->
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick" />
+                    <input type="hidden" name="hosted_button_id" value="F5GM3RELUVNR4" />
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="hidden" name="on0" value="Ingresa tu Discord" />
+                                Ingresa tu Discord
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="os0" maxlength="200" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="hidden" name="on1" value="Fecha Elegida" />
+                                Fecha Elegida
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" name="os1" maxlength="200" />
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="hidden" name="currency_code" value="USD" />
+                    <input type="image" src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" title="PayPal es una forma segura y fácil de pagar en línea." alt="Comprar ahora" />
+                </form>
+            </div>
+        </div>
+
+        <!-- Botón para cerrar la modal -->
+        <button id="close-modal-youtube-38" class="btn-amarillo">Cerrar</button>
+    </div>
+</div>
+
+    <!-- FIN Ventana Modal para YouTube ($38 USD) -->
+
+
+
+
+    <!--                FIN Ventanas Modales               -->
+
+
+
+
+        <!--                Scripts JavaScripts             -->
+
+        <script>
+        // Script para los checkboxes
         const checkboxes = document.querySelectorAll('.card .checkbox[name="review-option"]');
-    
-        // Verifica cuántos checkboxes se encontraron
-        console.log("Número de checkboxes encontrados:", checkboxes.length);
-    
-        // Añade un evento a cada checkbox
-        checkboxes.forEach(checkbox => {
-            checkbox.addEventListener('change', function() {
-                // Si este checkbox está seleccionado, deselecciona los demás
-                if (this.checked) {
-                    checkboxes.forEach(otherCheckbox => {
-                        if (otherCheckbox !== this) {
-                            otherCheckbox.checked = false;
-                        }
-                    });
-                }
-            });
+
+    // Añade un evento a cada checkbox
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            // Si este checkbox está seleccionado, deselecciona los demás
+            if (this.checked) {
+                checkboxes.forEach(otherCheckbox => {
+                    if (otherCheckbox !== this) {
+                        otherCheckbox.checked = false;
+                    }
+                });
+            }
         });
-    </script>
+    });
+
+    // Script para las modales
+    const solicitarReviewButton = document.querySelector('.texto-seccion .btn-amarillo'); // Botón "Solicitar Review" (ahora con clase btn-amarillo)
+    const modalTiktok = document.getElementById('modal-tiktok'); // Modal de TikTok
+    const modalYouTubePopular = document.getElementById('modal-youtube'); // Modal de YouTube Popular
+    const modalYouTube38 = document.getElementById('modal-youtube-38'); // Modal de YouTube ($38 USD)
+    const closeModalTiktokButton = document.getElementById('close-modal'); // Botón para cerrar la modal de TikTok
+    const closeModalYouTubePopularButton = document.getElementById('close-modal-youtube'); // Botón para cerrar la modal de YouTube Popular
+    const closeModalYouTube38Button = document.getElementById('close-modal-youtube-38'); // Botón para cerrar la modal de YouTube ($38 USD)
+
+    // Abre la modal correspondiente cuando se hace clic en el botón "Solicitar Review"
+    solicitarReviewButton.addEventListener('click', function() {
+        // Verifica si el checkbox de TikTok está seleccionado
+        const tiktokCheckbox = document.querySelector('.card:not(.popular) .checkbox'); // Selecciona el checkbox de TikTok
+        if (tiktokCheckbox && tiktokCheckbox.checked) {
+            modalTiktok.style.display = 'flex'; // Muestra la modal de TikTok
+            return;
+        }
+
+        // Verifica si el checkbox de YouTube Popular está seleccionado
+        const youtubePopularCheckbox = document.querySelector('.card.popular .checkbox'); // Selecciona el checkbox de YouTube Popular
+        if (youtubePopularCheckbox && youtubePopularCheckbox.checked) {
+            modalYouTubePopular.style.display = 'flex'; // Muestra la modal de YouTube Popular
+            return;
+        }
+
+        // Verifica si el checkbox de YouTube ($38 USD) está seleccionado
+        const youtube38Checkbox = document.querySelector('.card:nth-child(3) .checkbox'); // Selecciona el checkbox de YouTube ($38 USD)
+        if (youtube38Checkbox && youtube38Checkbox.checked) {
+            modalYouTube38.style.display = 'flex'; // Muestra la modal de YouTube ($38 USD)
+            return;
+        }
+
+        // Si no hay ningún checkbox seleccionado, muestra una alerta
+        alert("Por favor, selecciona una opción antes de solicitar la review.");
+    });
+
+    // Cierra la modal de TikTok
+    closeModalTiktokButton.addEventListener('click', function() {
+        modalTiktok.style.display = 'none'; // Oculta la modal de TikTok
+    });
+
+    // Cierra la modal de YouTube Popular
+    closeModalYouTubePopularButton.addEventListener('click', function() {
+        modalYouTubePopular.style.display = 'none'; // Oculta la modal de YouTube Popular
+    });
+
+    // Cierra la modal de YouTube ($38 USD)
+    closeModalYouTube38Button.addEventListener('click', function() {
+        modalYouTube38.style.display = 'none'; // Oculta la modal de YouTube ($38 USD)
+    });
+
+    // Cierra las modales si se hace clic fuera del contenido
+    window.addEventListener('click', function(event) {
+        if (event.target === modalTiktok) {
+            modalTiktok.style.display = 'none'; // Oculta la modal de TikTok
+        }
+        if (event.target === modalYouTubePopular) {
+            modalYouTubePopular.style.display = 'none'; // Oculta la modal de YouTube Popular
+        }
+        if (event.target === modalYouTube38) {
+            modalYouTube38.style.display = 'none'; // Oculta la modal de YouTube ($38 USD)
+        }
+    });
+        </script>
+
+    <!--                FIN Scripts JavaScripts             -->
 
 
     
