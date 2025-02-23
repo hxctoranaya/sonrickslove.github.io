@@ -507,14 +507,14 @@ body {
 /*              Estilo de la modal              */
 
 .modal {
-    display: none;
+    display: none; /* 🔹 Asegura que todos los modales estén ocultos inicialmente */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    display: flex; /* IMPORTANTE: centra el modal */
+    display: flex; /* 🔹 Esto mantiene el modal centrado cuando se muestra */
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -621,6 +621,11 @@ body {
 #close-modal-youtube:hover,
 #close-modal-youtube-38:hover {
     background-color: #FFE175; /* Cambia el color al pasar el cursor */
+}
+
+
+.modal-hidden {
+    display: none !important;
 }
 
 

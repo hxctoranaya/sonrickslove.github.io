@@ -197,7 +197,7 @@
 <!--                Ventanas Modales               -->
 
     <!-- Modal de TikTok -->
-    <div id="modal-tiktok" class="modal" style="display: none;">
+    <div id="modal-tiktok" class="modal modal-hidden">
         <div class="modal-content">
             <h1 class="fuentetitulos" style="text-align: center;">Review para TikTok</h1>
             <div class="modal-columns">
@@ -252,7 +252,7 @@
     </div>
     
     <!-- Modal de YouTube Popular -->
-    <div id="modal-youtube" class="modal" style="display: none;">
+    <div id="modal-youtube" class="modal modal-hidden">
         <div class="modal-content">
             <h1 class="fuentetitulos" style="text-align: center;">Review para YouTube</h1>
             <div class="modal-columns">
@@ -306,7 +306,7 @@
     </div>
     
     <!-- Modal de YouTube ($38 USD) -->
-    <div id="modal-youtube-38" class="modal" style="display: none;">
+    <div id="modal-youtube-38" class="modal modal-hidden">
         <div class="modal-content">
             <h1 class="fuentetitulos" style="text-align: center;">Review para YouTube</h1>
             <div class="modal-columns">
@@ -373,88 +373,84 @@
 <!--                Scripts JavaScripts             -->
 
 <script>
-    // Script para los checkboxes
-    const checkboxes = document.querySelectorAll('.card .checkbox[name="review-option"]');
+    document.addEventListener("DOMContentLoaded", function () {
+        // Asegurar que todos los modales estén ocultos al iniciar
+        document.querySelectorAll(".modal").forEach(modal => modal.classList.add("modal-hidden"));
 
-    // Añade un evento a cada checkbox
-    checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', function() {
-            // Si este checkbox está seleccionado, deselecciona los demás
-            if (this.checked) {
-                checkboxes.forEach(otherCheckbox => {
-                    if (otherCheckbox !== this) {
-                        otherCheckbox.checked = false;
-                    }
-                });
+        // Seleccionar los checkboxes de los paquetes
+        const checkboxes = document.querySelectorAll('.card .checkbox[name="review-option"]');
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                // Si este checkbox está seleccionado, deselecciona los demás
+                if (this.checked) {
+                    checkboxes.forEach(otherCheckbox => {
+                        if (otherCheckbox !== this) {
+                            otherCheckbox.checked = false;
+                        }
+                    });
+                }
+            });
+        });
+
+        // Obtener el botón "Solicitar Review"
+        const solicitarReviewButton = document.querySelector('.texto-seccion .btn-amarillo');
+
+        solicitarReviewButton.addEventListener('click', function() {
+            let modalId = null;
+
+            // Determinar cuál checkbox está seleccionado
+            if (document.querySelector('.card:not(.popular) .checkbox:checked')) {
+                modalId = "modal-tiktok";
+            } else if (document.querySelector('.card.popular .checkbox:checked')) {
+                modalId = "modal-youtube";
+            } else if (document.querySelector('.card:nth-child(3) .checkbox:checked')) {
+                modalId = "modal-youtube-38";
+            } else {
+                alert("Por favor, selecciona una opción antes de solicitar la review.");
+                return;
             }
+
+            abrirModal(modalId);
+        });
+
+        // Función para abrir un modal
+        function abrirModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove("modal-hidden");
+            }
+        }
+
+        // Función para cerrar los modales
+        function cerrarModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add("modal-hidden");
+            }
+        }
+
+        // Agregar eventos a los botones de cerrar
+        document.querySelectorAll(".btn-amarillo").forEach(boton => {
+            boton.addEventListener("click", function () {
+                const modal = this.closest(".modal");
+                if (modal) {
+                    modal.classList.add("modal-hidden");
+                }
+            });
+        });
+
+        // Cerrar modal al hacer clic fuera de ella
+        window.addEventListener('click', function(event) {
+            document.querySelectorAll('.modal').forEach(modal => {
+                if (event.target === modal) {
+                    modal.classList.add("modal-hidden");
+                }
+            });
         });
     });
+</script>
 
-    // Script para las modales
-    const solicitarReviewButton = document.querySelector('.texto-seccion .btn-amarillo'); // Botón "Solicitar Review"
-    const modalTiktok = document.getElementById('modal-tiktok'); // Modal de TikTok
-    const modalYouTubePopular = document.getElementById('modal-youtube'); // Modal de YouTube Popular
-    const modalYouTube38 = document.querySelectorAll('#modal-youtube-38, #modal-youtube-38-alt');
-    // Modal de YouTube ($38 USD)
-    const closeModalTiktokButton = document.getElementById('close-modal'); // Botón para cerrar la modal de TikTok
-    const closeModalYouTubePopularButton = document.getElementById('close-modal-youtube'); // Botón para cerrar la modal de YouTube Popular
-    const closeModalYouTube38Button = document.getElementById('close-modal-youtube-38'); // Botón para cerrar la modal de YouTube ($38 USD)
-
-    // Abre la modal correspondiente cuando se hace clic en el botón "Solicitar Review"
-    solicitarReviewButton.addEventListener('click', function() {
-        // Verifica si el checkbox de TikTok está seleccionado
-        const tiktokCheckbox = document.querySelector('.card:not(.popular) .checkbox'); // Selecciona el checkbox de TikTok
-        if (tiktokCheckbox && tiktokCheckbox.checked) {
-            modalTiktok.style.display = 'flex'; // Muestra la modal de TikTok
-            return;
-        }
-
-        // Verifica si el checkbox de YouTube Popular está seleccionado
-        const youtubePopularCheckbox = document.querySelector('.card.popular .checkbox'); // Selecciona el checkbox de YouTube Popular
-        if (youtubePopularCheckbox && youtubePopularCheckbox.checked) {
-            modalYouTubePopular.style.display = 'flex'; // Muestra la modal de YouTube Popular
-            return;
-        }
-
-        // Verifica si el checkbox de YouTube ($38 USD) está seleccionado
-        const youtube38Checkbox = document.querySelector('.card:nth-child(3) .checkbox'); // Selecciona el checkbox de YouTube ($38 USD)
-        if (youtube38Checkbox && youtube38Checkbox.checked) {
-            modalYouTube38.style.display = 'flex'; // Muestra la modal de YouTube ($38 USD)
-            return;
-        }
-
-        // Si no hay ningún checkbox seleccionado, muestra una alerta
-        alert("Por favor, selecciona una opción antes de solicitar la review.");
-    });
-
-    // Cierra la modal de TikTok
-    closeModalTiktokButton.addEventListener('click', function() {
-        modalTiktok.style.display = 'none'; // Oculta la modal de TikTok
-    });
-
-    // Cierra la modal de YouTube Popular
-    closeModalYouTubePopularButton.addEventListener('click', function() {
-        modalYouTubePopular.style.display = 'none'; // Oculta la modal de YouTube Popular
-    });
-
-    // Cierra la modal de YouTube ($38 USD)
-    closeModalYouTube38Button.addEventListener('click', function() {
-    modalYouTube38.forEach(modal => modal.style.display = 'none'); // Cierra todos los modales con ese ID
-    });
-
-    // Cierra las modales si se hace clic fuera del contenido
-    window.addEventListener('click', function(event) {
-        if (event.target === modalTiktok) {
-            modalTiktok.style.display = 'none'; // Oculta la modal de TikTok
-        }
-        if (event.target === modalYouTubePopular) {
-            modalYouTubePopular.style.display = 'none'; // Oculta la modal de YouTube Popular
-        }
-        if (event.target === modalYouTube38) {
-            modalYouTube38.style.display = 'none'; // Oculta la modal de YouTube ($38 USD)
-        }
-    });
-    </script>
 
 <!--                FIN Scripts JavaScripts             -->
 
