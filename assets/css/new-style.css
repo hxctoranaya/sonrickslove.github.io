@@ -97,6 +97,14 @@ body {
 
 
 
+
+
+
+
+
+
+
+
 /*              Navbar              */
 .navbar {
     position: fixed;
@@ -231,6 +239,13 @@ body {
 }
 
 /*              Fin Navbar              */
+
+
+
+
+
+
+
 
 
 
@@ -496,6 +511,153 @@ body {
     max-width: 20%; /* Limita el tamaño para que no se desborde */
     transform: none; /* Elimina el transform que lo centraba */
 }
+
+
+
+
+
+
+
+
+
+
+/*              Sección Colaboraciones              */
+
+/* Estilos para la sección unificada */
+#mercado-colaboraciones {
+    background: #171615; /* Fondo de la sección */
+    padding: 50px 20px; /* Espaciado interno */
+    text-align: center; /* Centrar el contenido */
+}
+
+/* Estilos para el contenido de Mercado */
+.contenido-mercado {
+    margin-bottom: 50px; /* Espaciado entre Mercado y Colaboraciones */
+}
+
+.contenido-mercado .texto-seccion {
+    max-width: 800px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el contenido */
+}
+
+/* Título con difuminado vertical */
+.fuentetitulos-difuminado {
+    font-family: "Minecrafter", sans-serif; /* Fuente Minecrafter */
+    font-size: 3rem; /* Tamaño del título */
+    margin-bottom: 20px; /* Espaciado inferior */
+    background: linear-gradient(to top, #ffcb36, #ffea6d); /* Difuminado de abajo hacia arriba */
+    -webkit-background-clip: text; /* Aplicar el gradiente al texto */
+    -webkit-text-fill-color: transparent; /* Hacer el texto transparente */
+    text-transform: lowercase; /* Texto en minúscula */
+}
+
+/* Clase para la "Ñ" en mayúscula */
+.mayuscula {
+    text-transform: uppercase; /* La "Ñ" en mayúscula */
+}
+
+/* Texto más pequeño */
+.texto-pequeno {
+    font-size: 1rem; /* Tamaño del texto reducido */
+    color: #ffffff; /* Color del texto */
+    margin-bottom: 30px; /* Espaciado inferior */
+}
+
+/* Estilos para el contenido de Colaboraciones */
+.contenido-colaboraciones {
+    display: flex; /* Flexbox para alinear las colaboraciones */
+    justify-content: space-between; /* Espacio entre las colaboraciones */
+    gap: 20px; /* Espacio entre las colaboraciones */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+}
+
+.cuadro-colaboraciones {
+    background: #312f2e; /* Color del cuadro */
+    border: 2px solid; /* Borde de 2px */
+    border-color: #db9f21 #db9f21 #624a26 #624a26; /* Colores del borde (arriba, derecha, abajo, izquierda) */
+    padding: 20px; /* Espaciado interno */
+    width: 30%; /* Ancho de cada colaboración */
+    position: relative; /* Para posicionar la monedita y las estrellas */
+    box-shadow: 0 0 40px 15px rgba(255, 212, 59, 0.6); /* Resplandor amarillo más grande */
+}
+
+.imagen-colaboraciones {
+    width: 100%; /* La imagen ocupa todo el ancho del cuadro */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.fuentesubtitulos {
+    font-family: "Minecraft", sans-serif; /* Fuente Minecraft */
+    color: #ffffff; /* Color del texto */
+    font-size: 1.5rem; /* Tamaño del texto */
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+.world-autor {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre "Server" y "+300 Jugadores Activos" */
+    margin-bottom: 15px; /* Espaciado inferior */
+    justify-content: flex-start; /* Alineación a la izquierda */
+}
+
+.world {
+    background: #171615; /* Fondo del cuadro "Server" */
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 0; /* Sin bordes redondeados */
+    font-family: 'Montserrat', sans-serif; /* Fuente general */
+    font-size: 1rem; /* Tamaño del texto */
+    color: #ffffff; /* Color del texto */
+}
+
+.por-autor {
+    font-family: 'Montserrat', sans-serif; /* Fuente general */
+    font-size: 1rem; /* Tamaño del texto */
+    color: #ffffff; /* Color del texto */
+}
+
+.estrellas {
+    font-size: 1.5rem; /* Tamaño de las estrellas */
+    color: #ffd953; /* Color amarillo para las estrellas */
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: 10px; /* Distancia desde abajo */
+    left: 10px; /* Distancia desde la izquierda */
+    margin-top: 10px; /* Espacio entre Server y las estrellas */
+}
+
+.monedita {
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: 10px; /* Distancia desde abajo */
+    right: 10px; /* Distancia desde la derecha */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espacio entre la imagen y el texto */
+}
+
+.monedita img {
+    width: 20px; /* Tamaño de la monedita */
+    height: 20px; /* Tamaño de la monedita */
+}
+
+.monedita span {
+    font-family: 'Montserrat', sans-serif; /* Fuente general */
+    font-size: 1rem; /* Tamaño del texto */
+    color: #ffffff; /* Color del texto */
+}
+
+/*              FIN Sección Colaboraciones              */
+
+
+
+
+
+
+
+
+
+
+
 
 
 
