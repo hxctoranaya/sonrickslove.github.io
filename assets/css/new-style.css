@@ -16,6 +16,7 @@ body {
     min-height: 100vh;
     padding-top: 70px; /* Ajustado para navbar más pequeño */
     background: #171615; /* 🔹 Color de fondo de la página */
+    
 }
 
 .fuentetitulos {
@@ -282,8 +283,10 @@ body {
 /* Paquetes contenido */
 .container {
     width: 80%;
-    margin: auto;
+    
     padding-top: 20px;
+    margin: 0; /* Elimina el margen del contenedor */
+    padding: 0; /* Elimina el padding del contenedor */
 }
 
 .title {
@@ -528,6 +531,7 @@ body {
     background: #171615; /* Fondo de la sección */
     padding: 50px 20px; /* Espaciado interno */
     text-align: center; /* Centrar el contenido */
+    margin-bottom: 50px; /* Añade un espacio al final de la sección */
 }
 
 /* Estilos para el contenido de Mercado */
@@ -567,8 +571,8 @@ body {
 .contenido-colaboraciones {
     display: flex; /* Flexbox para alinear las colaboraciones */
     justify-content: space-between; /* Espacio entre las colaboraciones */
-    gap: 20px; /* Espacio entre las colaboraciones */
-    max-width: 1200px; /* Ancho máximo del contenedor */
+    gap: 120px; /* Espacio entre las colaboraciones aumentado (antes era 20px) */
+    max-width: 1400px; /* Ancho máximo del contenedor (aumentado) */
     margin: 0 auto; /* Centrar el contenedor */
 }
 
@@ -576,73 +580,73 @@ body {
     background: #312f2e; /* Color del cuadro */
     border: 2px solid; /* Borde de 2px */
     border-color: #db9f21 #db9f21 #624a26 #624a26; /* Colores del borde (arriba, derecha, abajo, izquierda) */
-    padding: 20px; /* Espaciado interno */
-    width: 30%; /* Ancho de cada colaboración */
+    padding: 30px; /* Espaciado interno aumentado */
+    width: 32%; /* Ancho de cada colaboración (ajustado para 3 cuadros) */
     position: relative; /* Para posicionar la monedita y las estrellas */
     box-shadow: 0 0 40px 15px rgba(255, 212, 59, 0.6); /* Resplandor amarillo más grande */
 }
 
 .imagen-colaboraciones {
     width: 100%; /* La imagen ocupa todo el ancho del cuadro */
-    margin-bottom: 20px; /* Espaciado inferior */
+    margin-bottom: 30px; /* Espaciado inferior aumentado */
 }
 
 .fuentesubtitulos {
     font-family: "Minecraft", sans-serif; /* Fuente Minecraft */
     color: #ffffff; /* Color del texto */
-    font-size: 1.5rem; /* Tamaño del texto */
-    margin-bottom: 15px; /* Espaciado inferior */
+    font-size: 2rem; /* Tamaño del texto aumentado */
+    margin-bottom: 20px; /* Espaciado inferior aumentado */
 }
 
 .world-autor {
     display: flex;
     align-items: center;
-    gap: 10px; /* Espacio entre "Server" y "+300 Jugadores Activos" */
-    margin-bottom: 15px; /* Espaciado inferior */
+    gap: 15px; /* Espacio entre "Server" y "+300 Jugadores Activos" aumentado */
+    margin-bottom: 20px; /* Espaciado inferior aumentado */
     justify-content: flex-start; /* Alineación a la izquierda */
 }
 
 .world {
     background: #171615; /* Fondo del cuadro "Server" */
-    padding: 5px 10px; /* Espaciado interno */
+    padding: 8px 15px; /* Espaciado interno aumentado */
     border-radius: 0; /* Sin bordes redondeados */
     font-family: 'Montserrat', sans-serif; /* Fuente general */
-    font-size: 1rem; /* Tamaño del texto */
+    font-size: 0.9rem; /* Tamaño del texto reducido */
     color: #ffffff; /* Color del texto */
 }
 
 .por-autor {
     font-family: 'Montserrat', sans-serif; /* Fuente general */
-    font-size: 1rem; /* Tamaño del texto */
+    font-size: 0.9rem; /* Tamaño del texto reducido */
     color: #ffffff; /* Color del texto */
 }
 
 .estrellas {
-    font-size: 1.5rem; /* Tamaño de las estrellas */
+    font-size: 1.5rem; /* Tamaño de las estrellas reducido */
     color: #ffd953; /* Color amarillo para las estrellas */
     position: absolute; /* Posicionamiento absoluto */
-    bottom: 10px; /* Distancia desde abajo */
-    left: 10px; /* Distancia desde la izquierda */
-    margin-top: 10px; /* Espacio entre Server y las estrellas */
+    bottom: 20px; /* Distancia desde abajo aumentada */
+    left: 20px; /* Distancia desde la izquierda aumentada */
+    margin-top: 15px; /* Espacio entre Server y las estrellas aumentado */
 }
 
 .monedita {
     position: absolute; /* Posicionamiento absoluto */
-    bottom: 10px; /* Distancia desde abajo */
-    right: 10px; /* Distancia desde la derecha */
+    bottom: 20px; /* Distancia desde abajo aumentada */
+    right: 20px; /* Distancia desde la derecha aumentada */
     display: flex;
     align-items: center;
-    gap: 5px; /* Espacio entre la imagen y el texto */
+    gap: 8px; /* Espacio entre la imagen y el texto aumentado */
 }
 
 .monedita img {
-    width: 20px; /* Tamaño de la monedita */
-    height: 20px; /* Tamaño de la monedita */
+    width: 25px; /* Tamaño de la monedita aumentado */
+    height: 25px; /* Tamaño de la monedita aumentado */
 }
 
 .monedita span {
     font-family: 'Montserrat', sans-serif; /* Fuente general */
-    font-size: 1rem; /* Tamaño del texto */
+    font-size: 0.9rem; /* Tamaño del texto reducido */
     color: #ffffff; /* Color del texto */
 }
 
@@ -654,6 +658,205 @@ body {
 
 
 
+/*              Sección Top Servers                     */
+
+/* Sección Unificada: Top Servers y Complementos */
+#top-servers-complementos {
+    background: #262423; /* Fondo de la sección */
+    padding: 50px 20px; /* Espaciado interno */
+    color: #ffffff; /* Color del texto */
+    border-top: 2px solid #5d4b21; /* Borde superior con el nuevo color */
+}
+
+/* Contenido de Top Servers */
+.contenido-top-servers {
+    display: flex; /* Flexbox para alinear la imagen y el texto */
+    align-items: flex-start; /* Alinear al inicio (parte superior) */
+    justify-content: space-between; /* Espacio entre la imagen y el contenido */
+    max-width: 1400px; /* Ancho máximo del contenedor (aumentado) */
+    margin: 0 auto; /* Centrar el contenedor */
+    margin-bottom: 50px; /* Espacio entre Top Servers y Complementos */
+}
+
+/* Imagen a la izquierda */
+.imagen-top-servers {
+    flex: 0 0 60%; /* Ocupa el 60% del espacio y no crece ni se reduce */
+    text-align: left; /* Alinear la imagen a la izquierda */
+    margin-left: -10%; /* Mueve la imagen más a la izquierda */
+}
+
+.imagen-top-servers img {
+    max-width: 100%; /* Aumenta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción */
+}
+
+/* Contenido a la derecha */
+.contenido-derecha {
+    flex: 0 0 40%; /* Ocupa el 40% del espacio y no crece ni se reduce */
+    text-align: center; /* Centrar el contenido */
+    padding-left: 40px; /* Espacio entre la imagen y el contenido */
+    max-width: 100%; /* Asegura que el contenedor no tenga un ancho fijo */
+}
+
+/* Imagen de título centrada */
+.titulo-con-imagen {
+    text-align: center; /* Centra la imagen */
+}
+
+.titulo-con-imagen img {
+    max-width: 100%; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción */
+    margin-left: 0; /* Elimina el margen izquierdo */
+}
+
+/* Estilo para el texto debajo de la imagen de título */
+.texto-pequeno {
+    font-size: 1.1rem; /* Tamaño del texto reducido */
+    color: #ffffff; /* Color del texto */
+    margin-bottom: 20px; /* Espaciado inferior */
+    text-align: left; /* Alinea el texto a la izquierda */
+    max-width: 500px; /* Limita el ancho del texto */
+    line-height: 1.6; /* Espacio entre líneas para mejor legibilidad */
+}
+
+/* Estilo para el texto "Gratis durante" */
+.texto-mas-pequeno {
+    font-size: 0.9rem; /* Tamaño del texto más pequeño */
+    color: #c9c0bc; /* Cambia el color del texto a #c9c0bc */
+    margin-bottom: 0; /* Elimina el espacio superior */
+    margin-top: 0; /* Elimina el espacio superior */
+    text-align: center; /* Centra el texto */
+}
+
+/* Botón centrado */
+.boton-centrado {
+    text-align: center; /* Centrar el botón */
+    margin-top: 0; /* Eliminar el espacio superior del botón */
+}
+
+/* Botón */
+.btn-amarillo {
+    margin-bottom: 20px; /* Espaciado inferior para el botón */
+}
+
+/* Contenido de Complementos */
+.contenido-complementos {
+    display: flex; /* Flexbox para alinear las dos partes */
+    justify-content: space-between; /* Espacio entre las partes */
+    max-width: 1400px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+}
+
+/* Parte izquierda: Título, texto y botón */
+.parte-izquierda {
+    flex: 0 0 40%; /* Ocupa el 40% del espacio */
+    text-align: left; /* Alinea el contenido a la izquierda */
+    padding-right: 20px; /* Espacio entre la parte izquierda y derecha */
+    margin-left: -10%; /* Mueve más a la izquierda */
+}
+
+.fuentetitulos-difuminado {
+    font-family: "Minecrafter", sans-serif; /* Fuente Minecrafter */
+    font-size: 3rem; /* Tamaño del título aumentado */
+    background: linear-gradient(to top, #ffcb36, #ffea6d); /* Difuminado de abajo hacia arriba */
+    -webkit-background-clip: text; /* Aplicar el gradiente al texto */
+    -webkit-text-fill-color: transparent; /* Hacer el texto transparente */
+    margin-bottom: 20px; /* Espaciado inferior */
+    line-height: 1.2; /* Espacio entre líneas */
+}
+
+/* ... (resto del CSS anterior) ... */
+
+/* Parte derecha: Cuadros de complementos */
+.parte-derecha {
+    flex: 0 0 70%; /* Aumentamos el ancho para que los cuadros quepan */
+    overflow: hidden; /* Evita que los cuadros se desborden */
+    margin-left: -15%; /* Ajustamos el margen izquierdo para acercar los cuadros */
+}
+
+.lista-complementos {
+    display: flex;
+    justify-content: flex-start; /* Alinea los cuadros a la izquierda */
+    gap: 8px; /* Reducimos el espacio entre los cuadros */
+    flex-wrap: nowrap; /* Evita que los cuadros se envuelvan a la siguiente línea */
+}
+
+.complemento {
+    background: #3c3938; /* Fondo del cuadro de complemento */
+    padding: 20px; /* Espaciado interno */
+    width: 240px; /* Reducimos ligeramente el ancho de los cuadros */
+    height: 270px; /* Mantenemos la altura de los cuadros */
+    text-align: left; /* Alinea el contenido a la izquierda */
+    position: relative; /* Para posicionar la monedita */
+    flex-shrink: 0; /* Evita que los cuadros se reduzcan */
+}
+
+.imagen-complemento {
+    width: 100%; /* La imagen ocupa todo el ancho del cuadro */
+    height: 130px; /* Altura de la imagen */
+    object-fit: cover; /* Ajusta la imagen al contenedor */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.complemento h3 {
+    font-size: 1.2rem; /* Tamaño del título del complemento */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.complemento p {
+    font-size: 0.9rem; /* Tamaño del texto del autor */
+    color: #c9c0bc; /* Color del texto */
+    margin-bottom: 10px; /* Espaciado inferior */
+}
+
+.complemento .rating {
+    font-size: 1rem; /* Tamaño del texto de rating */
+    color: #ffd953; /* Color amarillo para las estrellas */
+    margin-bottom: 10px; /* Espaciado inferior */
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: 15px; /* Ajustamos la posición vertical */
+    left: 20px; /* Distancia desde la izquierda */
+    display: flex; /* Alineamos el texto con la moneda */
+    align-items: center; /* Centramos verticalmente */
+    gap: 5px; /* Espacio entre el ícono y el texto */
+}
+
+.complemento .monedita {
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: 15px; /* Ajustamos la posición vertical */
+    right: 20px; /* Distancia desde la derecha */
+    display: flex;
+    align-items: center; /* Centramos verticalmente */
+    gap: 5px; /* Espacio entre la imagen y el texto */
+}
+
+.complemento .monedita img {
+    width: 20px; /* Tamaño de la monedita */
+    height: 20px; /* Tamaño de la monedita */
+}
+
+.complemento .monedita span {
+    font-size: 0.9rem; /* Tamaño del texto */
+    color: #ffffff; /* Color del texto */
+}
+
+/* Imagen de fondo que abarca el ancho de la página */
+.fondo-destello {
+    width: 100vw; /* Ocupa el 100% del ancho de la ventana */
+    margin-left: calc(-50vw + 50%); /* Centra la imagen horizontalmente */
+    display: block; /* Asegura que la imagen se comporte como un bloque */
+    margin-top: 20px; /* Espacio superior */
+    margin-bottom: 0; /* Elimina el margen inferior */
+}
+
+/* Eliminar el margen inferior de la sección */
+#top-servers-complementos {
+    margin-bottom: 0; /* Asegura que no haya espacio adicional debajo de la imagen */
+}
+
+
+
+/*              FIN Sección Top Servers                     */
 
 
 
