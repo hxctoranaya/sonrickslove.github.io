@@ -8,6 +8,7 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     color: #ffffff;
+    
 }
 
 body {
@@ -16,7 +17,8 @@ body {
     min-height: 100vh;
     padding-top: 70px; /* Ajustado para navbar más pequeño */
     background: #171615; /* 🔹 Color de fondo de la página */
-    
+    overflow-x: hidden; /* Oculta el scroll horizontal */
+    width: 100%; /* Asegura que el ancho no exceda el 100% */
 }
 
 .fuentetitulos {
@@ -274,33 +276,34 @@ body {
     z-index: 2;
 }
 
+/* Ajustar el ancho del contenedor */
 .texto-seccion {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 1000px; /* Aumentar el ancho del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
 }
 
 
-/* Paquetes contenido */
+/* Estilo para el contenedor */
 .container {
-    width: 80%;
-    
-    padding-top: 20px;
-    margin: 0; /* Elimina el margen del contenedor */
-    padding: 0; /* Elimina el padding del contenedor */
+    width: 80%; /* Ancho del contenedor (ajusta según sea necesario) */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    padding-top: 20px; /* Espaciado superior */
+    text-align: center; /* Centrar el contenido dentro del contenedor */
 }
 
+/* Estilo para el título "SELECCIONAR UN PAQUETE" */
 .title {
-    text-transform: uppercase;
-    font-size: 14px; /* Tamaño más pequeño para el texto */
-    margin-bottom: 20px;
-    color: #ffffff;
-    text-align: center;
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-size: 14px; /* Tamaño del texto */
+    margin-bottom: 20px; /* Espaciado inferior */
+    color: #beb6b2; /* Nuevo color del texto (#beb6b2) */
+    text-align: center; /* Centrar el texto */
 }
 
 /* Contenedor de la tienda */
 .store {
     display: flex;
-    justify-content: flex-start; /* Alinea las tarjetas a la izquierda */
+    justify-content: center; /* Alinea las tarjetas a la izquierda */
     gap: 25px;
     flex-wrap: nowrap; /* Asegura que las tarjetas no se envuelvan a la siguiente línea */
     width: 100%; /* Ancho ajustado */
@@ -537,6 +540,11 @@ body {
 /* Estilos para el contenido de Mercado */
 .contenido-mercado {
     margin-bottom: 50px; /* Espaciado entre Mercado y Colaboraciones */
+    text-align: center; /* Centrar el texto */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    flex-direction: column; /* Apilar elementos verticalmente */
 }
 
 .contenido-mercado .texto-seccion {
@@ -547,12 +555,32 @@ body {
 /* Título con difuminado vertical */
 .fuentetitulos-difuminado {
     font-family: "Minecrafter", sans-serif; /* Fuente Minecrafter */
-    font-size: 3rem; /* Tamaño del título */
+    font-size: 4.5rem; /* Aumentamos el tamaño del título */
     margin-bottom: 20px; /* Espaciado inferior */
     background: linear-gradient(to top, #ffcb36, #ffea6d); /* Difuminado de abajo hacia arriba */
     -webkit-background-clip: text; /* Aplicar el gradiente al texto */
     -webkit-text-fill-color: transparent; /* Hacer el texto transparente */
     text-transform: lowercase; /* Texto en minúscula */
+    text-align: center; /* Centrar el título */
+    line-height: 1.2; /* Ajustar el espacio entre líneas */
+    white-space: nowrap; /* Evitar que el título se divida en varias líneas */
+}
+
+/* Nueva clase para el título centrado */
+.fuentetitulos-difuminado-centrado {
+    font-family: "Minecrafter", sans-serif;
+    font-size: 3.5rem; /* Aumentamos el tamaño del texto */
+    margin-bottom: 20px;
+    background: linear-gradient(to top, #ffcb36, #ffea6d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: lowercase;
+    text-align: center;
+    line-height: 1.2;
+    white-space: nowrap;
+    padding: 0 20px;
+    overflow: visible;
+    letter-spacing: 2px; /* Añadimos un pequeño espacio entre letras */
 }
 
 /* Clase para la "Ñ" en mayúscula */
@@ -562,9 +590,47 @@ body {
 
 /* Texto más pequeño */
 .texto-pequeno {
-    font-size: 1rem; /* Tamaño del texto reducido */
+    font-size: 1.1rem; /* Aumentamos ligeramente el tamaño del texto */
     color: #ffffff; /* Color del texto */
     margin-bottom: 30px; /* Espaciado inferior */
+    text-align: center; /* Centrar el texto */
+    max-width: 600px; /* Reducimos el ancho máximo para forzar 2 líneas */
+    margin-left: auto; /* Centrar horizontalmente */
+    margin-right: auto; /* Centrar horizontalmente */
+    padding: 0 20px; /* Añadir un poco de padding para evitar que el texto toque los bordes */
+    line-height: 1.5; /* Ajustar el espacio entre líneas */
+}
+
+/* Nueva clase para el texto de colaboraciones */
+.texto-colaboraciones {
+    font-size: 1rem; /* Reducimos el tamaño del texto */
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-align: center; /* Centramos el texto */
+    max-width: 600px;
+    line-height: 1.5;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: normal;
+}
+
+/* Alinear la primera parte del texto a la izquierda */
+.texto-colaboraciones .primera-parte {
+    display: block; /* Ocupa toda la línea */
+    text-align: left; /* Alinea el texto a la izquierda */
+    white-space: nowrap; /* Evita saltos de línea */
+    margin: 0; /* Elimina márgenes adicionales */
+    padding: 0; /* Elimina cualquier padding adicional */
+    width: 100%; /* Ocupa el ancho completo */
+    margin-left: -70px; /* Mueve el texto más a la izquierda */
+}
+
+/* Forzar el salto de línea justo antes de la pregunta */
+.texto-colaboraciones .pregunta {
+    display: block; /* Ocupa una línea completa */
+    text-align: center; /* Centra el texto */
+    margin-top: 10px; /* Espacio entre las dos líneas */
+    white-space: normal; /* Permite saltos de línea si es necesario */
 }
 
 /* Estilos para el contenido de Colaboraciones */
@@ -662,10 +728,12 @@ body {
 
 /* Sección Unificada: Top Servers y Complementos */
 #top-servers-complementos {
-    background: #262423; /* Fondo de la sección */
-    padding: 50px 20px; /* Espaciado interno */
-    color: #ffffff; /* Color del texto */
-    border-top: 2px solid #5d4b21; /* Borde superior con el nuevo color */
+    background: #262423;
+    padding: 50px 20px 0 20px; /* Elimina el padding inferior */
+    color: #ffffff;
+    border-top: 2px solid #5d4b21;
+    overflow-x: hidden;
+    position: relative;
 }
 
 /* Contenido de Top Servers */
@@ -709,20 +777,33 @@ body {
     margin-left: 0; /* Elimina el margen izquierdo */
 }
 
-/* Estilo para el texto debajo de la imagen de título */
-.texto-pequeno {
-    font-size: 1.1rem; /* Tamaño del texto reducido */
+/* Nueva clase para el texto específico de Top Servers */
+.texto-top-servers {
+    font-size: 1.0rem; /* Tamaño del texto reducido */
     color: #ffffff; /* Color del texto */
     margin-bottom: 20px; /* Espaciado inferior */
-    text-align: left; /* Alinea el texto a la izquierda */
+    text-align: center; /* Centrar el texto */
     max-width: 500px; /* Limita el ancho del texto */
-    line-height: 1.6; /* Espacio entre líneas para mejor legibilidad */
+    line-height: 1.6; /* Espacio entre líneas */
+    margin-left: auto; /* Centrar el contenedor */
+    margin-right: auto; /* Centrar el contenedor */
 }
 
-/* Estilo para el texto "Gratis durante" */
+/* Estilo para el texto debajo de la imagen de título */
+.texto-pequeno {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: left; /* Mantén la alineación izquierda para otros textos */
+    max-width: 500px;
+    line-height: 1.6;
+}
+
+
+/* Clase para el texto más pequeño */
 .texto-mas-pequeno {
-    font-size: 0.9rem; /* Tamaño del texto más pequeño */
-    color: #c9c0bc; /* Cambia el color del texto a #c9c0bc */
+    font-size: 0.8rem; /* Tamaño del texto reducido */
+    color: #c9c0bc; /* Color del texto */
     margin-bottom: 0; /* Elimina el espacio superior */
     margin-top: 0; /* Elimina el espacio superior */
     text-align: center; /* Centra el texto */
@@ -755,6 +836,8 @@ body {
     margin-left: -10%; /* Mueve más a la izquierda */
 }
 
+
+/* Título Top Servers Imagen*/
 .fuentetitulos-difuminado {
     font-family: "Minecrafter", sans-serif; /* Fuente Minecrafter */
     font-size: 3rem; /* Tamaño del título aumentado */
@@ -765,93 +848,178 @@ body {
     line-height: 1.2; /* Espacio entre líneas */
 }
 
-/* ... (resto del CSS anterior) ... */
-
 /* Parte derecha: Cuadros de complementos */
 .parte-derecha {
-    flex: 0 0 70%; /* Aumentamos el ancho para que los cuadros quepan */
-    overflow: hidden; /* Evita que los cuadros se desborden */
+    flex: 0 0 60%; /* Aumentamos el ancho para que los cuadros quepan */
     margin-left: -15%; /* Ajustamos el margen izquierdo para acercar los cuadros */
-}
-
-.lista-complementos {
-    display: flex;
-    justify-content: flex-start; /* Alinea los cuadros a la izquierda */
-    gap: 8px; /* Reducimos el espacio entre los cuadros */
-    flex-wrap: nowrap; /* Evita que los cuadros se envuelvan a la siguiente línea */
-}
-
-.complemento {
-    background: #3c3938; /* Fondo del cuadro de complemento */
-    padding: 20px; /* Espaciado interno */
-    width: 240px; /* Reducimos ligeramente el ancho de los cuadros */
-    height: 270px; /* Mantenemos la altura de los cuadros */
-    text-align: left; /* Alinea el contenido a la izquierda */
-    position: relative; /* Para posicionar la monedita */
-    flex-shrink: 0; /* Evita que los cuadros se reduzcan */
-}
-
-.imagen-complemento {
-    width: 100%; /* La imagen ocupa todo el ancho del cuadro */
-    height: 130px; /* Altura de la imagen */
-    object-fit: cover; /* Ajusta la imagen al contenedor */
-    margin-bottom: 10px; /* Espaciado inferior */
-}
-
-.complemento h3 {
-    font-size: 1.2rem; /* Tamaño del título del complemento */
-    margin-bottom: 10px; /* Espaciado inferior */
-}
-
-.complemento p {
-    font-size: 0.9rem; /* Tamaño del texto del autor */
-    color: #c9c0bc; /* Color del texto */
-    margin-bottom: 10px; /* Espaciado inferior */
-}
-
-.complemento .rating {
-    font-size: 1rem; /* Tamaño del texto de rating */
-    color: #ffd953; /* Color amarillo para las estrellas */
-    margin-bottom: 10px; /* Espaciado inferior */
-    position: absolute; /* Posicionamiento absoluto */
-    bottom: 15px; /* Ajustamos la posición vertical */
-    left: 20px; /* Distancia desde la izquierda */
-    display: flex; /* Alineamos el texto con la moneda */
-    align-items: center; /* Centramos verticalmente */
-    gap: 5px; /* Espacio entre el ícono y el texto */
-}
-
-.complemento .monedita {
-    position: absolute; /* Posicionamiento absoluto */
-    bottom: 15px; /* Ajustamos la posición vertical */
-    right: 20px; /* Distancia desde la derecha */
-    display: flex;
-    align-items: center; /* Centramos verticalmente */
-    gap: 5px; /* Espacio entre la imagen y el texto */
-}
-
-.complemento .monedita img {
-    width: 20px; /* Tamaño de la monedita */
-    height: 20px; /* Tamaño de la monedita */
-}
-
-.complemento .monedita span {
-    font-size: 0.9rem; /* Tamaño del texto */
-    color: #ffffff; /* Color del texto */
 }
 
 /* Imagen de fondo que abarca el ancho de la página */
 .fondo-destello {
     width: 100vw; /* Ocupa el 100% del ancho de la ventana */
-    margin-left: calc(-50vw + 50%); /* Centra la imagen horizontalmente */
+    height: auto; /* Mantiene la proporción de la imagen */
     display: block; /* Asegura que la imagen se comporte como un bloque */
-    margin-top: 20px; /* Espacio superior */
-    margin-bottom: 0; /* Elimina el margen inferior */
+    margin: 45px 0 0 0; /* Margen superior de 20px, y 0 en los demás lados */
+    padding: 0; /* Elimina cualquier padding */
+    position: relative; /* Posicionamiento relativo */
+    left: 50%; /* Mueve la imagen al 50% del contenedor */
+    transform: translateX(-50%); /* Centra la imagen horizontalmente */
 }
 
-/* Eliminar el margen inferior de la sección */
-#top-servers-complementos {
-    margin-bottom: 0; /* Asegura que no haya espacio adicional debajo de la imagen */
+/* Nuevo cuadro de reserva PayPal */
+.reserva-paypal {
+    background: #312f2e; /* Color del cuadro */
+    border: 2px solid; /* Borde de 2px */
+    border-color: #db9f21 #db9f21 #624a26 #624a26; /* Colores del borde */
+    padding: 30px; /* Espaciado interno */
+    width: 100%; /* Ancho del cuadro */
+    position: relative; /* Posicionamiento relativo */
+    box-shadow: 0 0 40px 15px rgba(255, 212, 59, 0.6); /* Resplandor amarillo */
+    margin-bottom: 20px; /* Espacio inferior */
+    text-align: center; /* Centrar el contenido */
+}
+
+/* Imagen dentro del cuadro de reserva PayPal */
+.reserva-paypal img {
+    width: 4em; /* Tamaño de la imagen */
+    height: 4em; /* Tamaño de la imagen */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Título dentro del cuadro de reserva PayPal */
+.reserva-paypal h2 {
+    font-family: "Minecraft", sans-serif; /* Fuente Minecraft */
+    color: #ffffff; /* Color del texto */
+    font-size: 2rem; /* Tamaño del texto */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Contenedor de "Selecciona tu lugar" */
+.reserva-paypal .nuevo-world-autor {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrar el contenido */
+    gap: 10px; /* Espacio entre elementos */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Estilo para "Selecciona tu lugar" */
+.reserva-paypal .nuevo-world {
+    background: #171615; /* Fondo del cuadro "Selecciona tu lugar" */
+    padding: 8px 15px; /* Espaciado interno */
+    border-radius: 0; /* Sin bordes redondeados */
+    font-family: 'Montserrat', sans-serif; /* Fuente general */
+    font-size: 0.9rem; /* Tamaño del texto */
+    color: #ffffff; /* Color del texto */
+}
+
+/* Estrellas dentro del cuadro de reserva PayPal */
+.reserva-paypal .nuevo-estrellas {
+    font-size: 1.5rem; /* Tamaño de las estrellas */
+    color: #ffd953; /* Color amarillo para las estrellas */
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: 20px; /* Distancia desde abajo */
+    left: 20px; /* Distancia desde la izquierda */
+}
+
+/* Monedita dentro del cuadro de reserva PayPal */
+.reserva-paypal .nuevo-monedita {
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: 20px; /* Distancia desde abajo */
+    right: 20px; /* Distancia desde la derecha */
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre la imagen y el texto */
+}
+
+/* Imagen de la monedita */
+.reserva-paypal .nuevo-monedita img {
+    width: 25px; /* Tamaño de la monedita */
+    height: 25px; /* Tamaño de la monedita */
+}
+
+/* Texto de la monedita */
+.reserva-paypal .nuevo-monedita span {
+    font-family: 'Montserrat', sans-serif; /* Fuente general */
+    font-size: 0.9rem; /* Tamaño del texto */
+    color: #ffffff; /* Color del texto */
+}
+
+/* Estilos para el formulario de PayPal */
+.reserva-paypal form {
+    margin-top: 20px; /* Espaciado superior */
+    text-align: center; /* Centrar el contenido del formulario */
+}
+
+.reserva-paypal table {
+    margin: 0 auto; /* Centrar la tabla */
+}
+
+/* Estilos para el campo de texto y el select (borde original) */
+.reserva-paypal select,
+.reserva-paypal input[type="text"] {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 10px; /* Espaciado inferior */
+    border: 2px solid; /* Borde de 2px */
+    border-color: #db9f21 #db9f21 #624a26 #624a26; /* Colores del borde original */
+    border-radius: 0; /* Bordes cuadrados */
+    font-family: 'Montserrat', sans-serif; /* Fuente general */
+    font-size: 1rem; /* Tamaño del texto */
+    color: #cec5c1; /* Color del texto */
+    background-color: #171615; /* Fondo del cuadro */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    outline: none; /* Elimina el outline por defecto */
+}
+
+/* Estilo cuando el campo de texto o select está enfocado (clic) */
+.reserva-paypal select:focus,
+.reserva-paypal input[type="text"]:focus {
+    border-color: #d2a140; /* Cambia el color del borde a #d2a140 */
+    box-shadow: none; /* Eliminar cualquier sombra por defecto */
+}
+
+/* Estilo para las opciones del menú desplegable */
+.reserva-paypal select option {
+    color: #cec5c1; /* Color del texto en las opciones */
+    background-color: #171615; /* Fondo de las opciones */
+}
+
+/* Estilo para el placeholder del campo de texto */
+.reserva-paypal input[type="text"]::placeholder {
+    color: #cec5c1; /* Color del placeholder */
+    opacity: 1; /* Asegura que el placeholder sea visible */
+}
+
+.reserva-paypal input[type="image"] {
+    margin-top: 10px; /* Espaciado superior */
+}
+
+/* Nuevas variables CSS para el estilo del texto */
+:root {
+    --fuentetitulos-font: "Minecrafter", sans-serif; /* Fuente Minecrafter */
+    --fuentetitulos-color: #ffd953; /* Color principal del texto */
+    --fuentetitulos-shadow: 2px 2px 0 #a17319; /* Sombra no difuminada */
+    --fuentetitulos-size: 3rem; /* Tamaño del texto */
+}
+
+/* Estilo para el ícono SVG */
+.reserva-paypal svg {
+    width: 4em; /* Tamaño del ícono */
+    height: 4em; /* Tamaño del ícono */
+    margin-bottom: 20px; /* Espaciado inferior */
+    fill: var(--fuentetitulos-color); /* Color del ícono */
+    filter: drop-shadow(var(--fuentetitulos-shadow)); /* Sombra del ícono */
+}
+
+/* Estilo para el texto "Top Mensual" */
+.reserva-paypal h2 {
+    font-family: var(--fuentetitulos-font); /* Fuente Minecrafter */
+    color: var(--fuentetitulos-color); /* Color del texto */
+    text-shadow: var(--fuentetitulos-shadow); /* Sombra del texto */
+    font-size: var(--fuentetitulos-size); /* Tamaño del texto */
+    margin-bottom: 20px; /* Espaciado inferior */
+    text-align: center; /* Centrar el texto */
 }
 
 
