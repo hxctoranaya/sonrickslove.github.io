@@ -437,21 +437,21 @@
             ¿Necesitas más Reviews o tienes alguna duda? puedes contactarme a través del siguiente formulario😄
         </div>
         <!-- Formulario de contacto -->
-        <form class="formulario-contacto">
+        <form class="formulario-contacto" action="https://formspree.io/f/mbjvyqky" method="post">
             <!-- Fila 1: Nombre y Correo electrónico -->
             <div class="fila-formulario">
-                <input type="text" class="campo-formulario" placeholder="Tu nombre" required>
-                <input type="email" class="campo-formulario" placeholder="Correo electrónico" required>
+                <input type="text" id="name" name="name" class="campo-formulario" placeholder="Tu nombre" required>
+                <input type="email" id="email" name="email" class="campo-formulario" placeholder="Correo electrónico" required>
             </div>
 
             <!-- Fila 2: Asunto e Ingresa tu Discord -->
             <div class="fila-formulario">
-                <input type="text" class="campo-formulario" placeholder="Asunto" required>
-                <input type="text" class="campo-formulario" placeholder="Ingresa tu Discord" required>
+                <input type="text" id="subject" name="subject" class="campo-formulario" placeholder="Asunto" required>
+                <input type="text" id="discord" name="discord" class="campo-formulario" placeholder="Ingresa tu Discord" required>
             </div>
 
             <!-- Campo: Ingresa tu mensaje -->
-            <textarea class="campo-formulario textarea" placeholder="Ingresa tu mensaje" rows="4" required></textarea>
+            <textarea id="message" name="message" class="campo-formulario textarea" placeholder="Ingresa tu mensaje" rows="4" required></textarea>
 
             <!-- Botón de enviar -->
             <button type="submit" class="boton-enviar"><span>Enviar</span></button>
