@@ -96,6 +96,12 @@ body {
     background-color: #FFE175; /* Cambia el color del centro al pasar el cursor */
 }
 
+/*              FIN Página en General               */
+
+
+
+
+
 
 
 
@@ -256,6 +262,7 @@ body {
 
 
 /*              Sección Contratar               */
+
 #contratar {
     position: relative;
     background-image: url('/assets/img/fondo-amarillo-seccion.png'); /* Ruta de la imagen */
@@ -473,18 +480,6 @@ body {
     margin-left: 10px; /* Espacio entre el checkbox y el precio */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* Imágenes del contenedor */
 .imagenes-seccion {
     position: absolute;
@@ -517,6 +512,12 @@ body {
     max-width: 20%; /* Limita el tamaño para que no se desborde */
     transform: none; /* Elimina el transform que lo centraba */
 }
+
+/*              FIN Sección Contratar               */
+
+
+
+
 
 
 
@@ -724,6 +725,13 @@ body {
 
 
 
+
+
+
+
+
+
+
 /*              Sección Top Servers                     */
 
 /* Sección Unificada: Top Servers y Complementos */
@@ -833,7 +841,7 @@ body {
     flex: 0 0 40%; /* Ocupa el 40% del espacio */
     text-align: left; /* Alinea el contenido a la izquierda */
     padding-right: 20px; /* Espacio entre la parte izquierda y derecha */
-    margin-left: -10%; /* Mueve más a la izquierda */
+    margin-left: 0; /* Mueve más a la izquierda */
 }
 
 
@@ -851,7 +859,7 @@ body {
 /* Parte derecha: Cuadros de complementos */
 .parte-derecha {
     flex: 0 0 60%; /* Aumentamos el ancho para que los cuadros quepan */
-    margin-left: -15%; /* Ajustamos el margen izquierdo para acercar los cuadros */
+    margin-left: 5%; /* Ajustamos el margen izquierdo para acercar los cuadros */
 }
 
 /* Imagen de fondo que abarca el ancho de la página */
@@ -872,7 +880,7 @@ body {
     border: 2px solid; /* Borde de 2px */
     border-color: #db9f21 #db9f21 #624a26 #624a26; /* Colores del borde */
     padding: 30px; /* Espaciado interno */
-    width: 100%; /* Ancho del cuadro */
+    width: 90%; /* Ancho del cuadro */
     position: relative; /* Posicionamiento relativo */
     box-shadow: 0 0 40px 15px rgba(255, 212, 59, 0.6); /* Resplandor amarillo */
     margin-bottom: 20px; /* Espacio inferior */
@@ -1025,6 +1033,559 @@ body {
 
 
 /*              FIN Sección Top Servers                     */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*              Sección Top Recursos Mensuales                     */
+
+/* Estilos para la nueva sección "Tops Recursos Mensuales" */
+#tops-recursos-mensuales {
+    background: #171615; /* Fondo de la sección */
+    padding: 50px 20px; /* Espaciado interno */
+    text-align: center; /* Centrar el contenido */
+    margin-bottom: 50px; /* Espacio inferior */
+}
+
+/* Contenido de la sección */
+.contenido-tops-recursos {
+    margin-bottom: 50px; /* Espaciado entre el contenido y los cuadros */
+    text-align: center; /* Centrar el texto */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    flex-direction: column; /* Apilar elementos verticalmente */
+    margin-top: 100px; /* Ajusta este valor según sea necesario */
+}
+
+/* Título con difuminado */
+.titulo-tops-recursos {
+    font-family: "Minecrafter", sans-serif; /* Fuente Minecrafter */
+    font-size: 3.5rem; /* Tamaño del título */
+    margin-bottom: 20px; /* Espaciado inferior */
+    background: linear-gradient(to top, #ffcb36, #ffea6d); /* Difuminado de abajo hacia arriba */
+    -webkit-background-clip: text; /* Aplicar el gradiente al texto */
+    -webkit-text-fill-color: transparent; /* Hacer el texto transparente */
+    text-transform: lowercase; /* Texto en minúscula */
+    text-align: center; /* Centrar el título */
+    line-height: 1.2; /* Ajustar el espacio entre líneas */
+    white-space: nowrap; /* Evitar que el título se divida en varias líneas */
+}
+
+/* Texto más pequeño */
+.texto-tops-recursos {
+    font-size: 1.1rem; /* Tamaño del texto */
+    color: #ffffff; /* Color del texto */
+    margin-bottom: 30px; /* Espaciado inferior */
+    text-align: center; /* Centrar el texto */
+    max-width: 100%; /* Ancho máximo del texto */
+    line-height: 1.5; /* Espacio entre líneas */
+    margin-left: auto; /* Centrar horizontalmente */
+    margin-right: auto; /* Centrar horizontalmente */
+    white-space: nowrap; /* Evitar saltos de línea */
+}
+
+/* Contenedor de los cuadros de recursos */
+.contenedor-cuadros-recursos {
+    display: flex;
+    justify-content: center; /* Centrar los cuadros */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Estilos para cada cuadro de recurso */
+.cuadro-recurso {
+    width: 35%; /* Ancho más reducido */
+    background: #312f2e; /* Fondo gris (se verá solo si la imagen no cubre todo) */
+    border: 2px solid;
+    border-color: #db9f21 #db9f21 #624a26 #624a26;
+    padding: 0; /* Eliminamos el padding para que no haya espacio interno */
+    position: relative;
+    box-shadow: 0 0 40px 15px rgba(255, 212, 59, 0.6);
+    overflow: hidden; /* Asegura que la imagen no se desborde */
+}
+
+/* Estilos para las imágenes dentro de los cuadros de recursos */
+.cuadro-recurso img {
+    width: 100%; /* La imagen ocupa todo el ancho del cuadro */
+    height: 100%; /* La imagen ocupa todo el alto del cuadro */
+    object-fit: cover; /* Ajusta la imagen para cubrir el cuadro sin distorsionar */
+    display: block; /* Elimina el espacio adicional debajo de la imagen */
+}
+
+/* Espacio entre los cuadros */
+.cuadro-recurso:first-child {
+    margin-right: 120px; /* Espacio entre los cuadros */
+}
+
+/* Imagen dentro del cuadro */
+.imagen-recurso {
+    width: 100%; /* La imagen ocupa todo el ancho del cuadro */
+    margin-bottom: 30px; /* Espaciado inferior */
+}
+
+/* Título del recurso */
+.titulo-recurso {
+    font-family: "Minecraft", sans-serif; /* Fuente Minecraft */
+    color: #ffffff; /* Color del texto */
+    font-size: 2rem; /* Tamaño del texto */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Información del recurso */
+.info-recurso {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre elementos */
+    margin-bottom: 20px; /* Espaciado inferior */
+    justify-content: flex-start; /* Alineación a la izquierda */
+}
+
+/* Estilo para el contenedor de los cuadros de recursos */
+.contenedor-cuadros-recursos {
+    display: flex;
+    justify-content: center; /* Centramos los cuadros horizontalmente */
+    gap: 0; /* Sin espacio entre los cuadros */
+    max-width: 1400px;
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 0; /* Eliminar cualquier padding adicional */
+}
+
+/* Estilo para cada cuadro de recurso */
+.cuadro-recurso {
+    width: 35%; /* Ancho original de cada cuadro */
+    background: #312f2e; /* Fondo gris */
+    border: 2px solid;
+    border-color: #db9f21 #db9f21 #624a26 #624a26;
+    padding: 0; /* Sin padding */
+    position: relative;
+    box-shadow: 0 0 40px 15px rgba(255, 212, 59, 0.6);
+    overflow: hidden; /* Asegura que la imagen no se desborde */
+    text-align: center; /* Centrar el contenido */
+    margin: 0; /* Eliminar cualquier margen adicional */
+}
+
+/* Estilo para las imágenes dentro de los cuadros */
+.imagen-recurso {
+    width: 100%; /* La imagen ocupa todo el ancho del cuadro */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Elimina el espacio adicional debajo de la imagen */
+    margin: 0; /* Eliminar cualquier margen adicional */
+}
+
+/* Estilo para el contenedor de textos */
+.contenedor-textos {
+    display: flex;
+    justify-content: center; /* Centramos los textos horizontalmente */
+    gap: 0; /* Sin espacio entre los textos */
+    max-width: 1400px;
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 0; /* Eliminar cualquier padding adicional */
+}
+
+/* Estilo para el texto debajo del cuadro de "Top Shaders" */
+.texto-debajo-shaders {
+    width: 35%; /* Ancho igual al de los cuadros */
+    text-align: center; /* Centrar el texto */
+    margin-top: 40px; /* Aumentamos el espacio entre el cuadro y el texto */
+    position: relative; /* Posicionamiento relativo para ajustes finos */
+    left: -5%; /* Ajuste para alinear con el cuadro de "Top Shaders" */
+}
+
+/* Estilo para el texto debajo del cuadro de "Top Texturas" */
+.texto-debajo-texturas {
+    width: 35%; /* Ancho igual al de los cuadros */
+    text-align: center; /* Centrar el texto */
+    margin-top: 40px; /* Aumentamos el espacio entre el cuadro y el texto */
+    position: relative; /* Posicionamiento relativo para ajustes finos */
+    left: 5%; /* Ajuste para alinear con el cuadro de "Top Texturas" */
+}
+
+/* Estilo para los textos "Descubre más sobre..." */
+.descubre-mas {
+    font-family: 'Montserrat', sans-serif; /* Fuente general */
+    font-size: 1rem; /* Tamaño del texto */
+    color: #FFD953; /* Color amarillo */
+    text-decoration: none; /* Sin subrayado */
+    white-space: nowrap; /* Evitar saltos de línea */
+    display: block; /* Cada enlace en una línea separada */
+}
+
+/* Estilo para el hover del enlace */
+.descubre-mas:hover {
+    color: #FFC42B; /* Cambia el color al pasar el cursor */
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+
+
+
+/*              FIN Sección Top Recursos Mensuales                     */
+
+
+
+
+
+
+
+
+
+
+
+
+/*                      Sección Contacto                        */
+
+/* Nueva sección de contacto y redes sociales */
+.seccion-contacto-redes {
+    display: flex;
+    justify-content: space-between; /* Separa los contenedores */
+    align-items: flex-start; /* Alinea los textos en la parte superior */
+    width: 100%; /* Ocupa el ancho completo de la página */
+    padding: 50px 0; /* Espaciado interno (solo arriba y abajo, sin padding lateral) */
+    font-family: "Minecrafter", sans-serif; /* Fuente Minecrafter */
+    background-color: #262423; /* Color de fondo de la sección */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    margin: 0; /* Elimina cualquier margen predeterminado */
+}
+
+/* Estilos para cada contenedor de texto */
+.contenedor-texto {
+    width: 45%; /* Ancho de cada contenedor */
+    text-align: left; /* Alineación del texto */
+    padding: 0 50px; /* Espaciado interno para separar los textos de los bordes */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+/* Estilo para el primer texto (Contacto) */
+.texto-contacto {
+    font-size: 2.5rem; /* Tamaño del texto */
+    background: linear-gradient(to top, #f8cf57, #fbea83); /* Difuminado de abajo hacia arriba */
+    -webkit-background-clip: text; /* Aplicar el gradiente al texto */
+    -webkit-text-fill-color: transparent; /* Hacer el texto transparente */
+    text-transform: lowercase; /* Texto en minúscula */
+    line-height: 1.2; /* Espacio entre líneas */
+    font-family: "Minecrafter", sans-serif; /* Fuente Minecrafter */
+}
+
+/* Estilo para el segundo texto (Redes Sociales) */
+.texto-redes {
+    font-size: 2.5rem; /* Tamaño del texto */
+    background: linear-gradient(to top, #5d99ce, #8ab6db); /* Difuminado de abajo hacia arriba */
+    -webkit-background-clip: text; /* Aplicar el gradiente al texto */
+    -webkit-text-fill-color: transparent; /* Hacer el texto transparente */
+    text-transform: lowercase; /* Texto en minúscula */
+    line-height: 1.2; /* Espacio entre líneas */
+    font-family: "Minecrafter", sans-serif; /* Fuente Minecrafter */
+}
+
+/* Línea separadora debajo de cada texto */
+.linea-separadora {
+    width: 100%; /* Ancho completo */
+    height: 1px; /* Grosor de la línea */
+    background-color: #6a6562; /* Color de la línea */
+    margin-top: 20px; /* Espacio entre el texto y la línea */
+}
+
+/* Estilo para el texto debajo de la línea separadora */
+.texto-formulario {
+    font-size: 1rem; /* Tamaño del texto */
+    color: #ffffff; /* Color del texto */
+    margin-top: 30px; /* Aumentamos el espacio entre la línea y el texto a 30px */
+    font-family: 'Montserrat', sans-serif; /* Fuente general */
+    text-align: left; /* Alineación del texto */
+}
+
+/* Contenedor del formulario */
+.formulario-contacto {
+    margin-top: 20px; /* Espacio entre el texto y el formulario */
+    width: 100%; /* Ancho completo */
+}
+
+/* Contenedor flexible para los campos en la misma línea */
+.fila-formulario {
+    display: flex;
+    gap: 15px; /* Espacio entre los campos */
+    margin-bottom: 15px; /* Espacio entre las filas */
+}
+
+/* Estilos para los campos del formulario */
+.campo-formulario {
+    flex: 1; /* Ocupa el espacio disponible */
+    padding: 10px; /* Espaciado interno */
+    border: 2px solid; /* Borde de 2px */
+    border-color: #db9f21 #db9f21 #624a26 #624a26; /* Colores del borde (arriba, derecha, abajo, izquierda) */
+    border-radius: 0; /* Bordes cuadrados */
+    font-family: 'Montserrat', sans-serif; /* Fuente general */
+    font-size: 1rem; /* Tamaño del texto */
+    color: #cec5c1; /* Color del texto */
+    background-color: #171615; /* Fondo del campo */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    outline: none; /* Elimina el outline por defecto */
+}
+
+/* Estilo cuando el campo está enfocado (clic) */
+.campo-formulario:focus {
+    border-color: #d2a140; /* Cambia el color del borde a #d2a140 */
+    box-shadow: none; /* Eliminar cualquier sombra por defecto */
+}
+
+/* Estilo para el textarea (Ingresa tu mensaje) */
+.campo-formulario.textarea {
+    width: 100%; /* Ocupa todo el ancho */
+    resize: vertical; /* Permite redimensionar verticalmente */
+    margin-bottom: 20px; /* Espacio entre el textarea y el botón de enviar */
+}
+
+/* Estilo para el texto de redes sociales */
+.texto-redes-sociales {
+    margin-top: 30px; /* Igual que el espacio de "¿Necesitas más Reviews...?" */
+    font-family: 'Montserrat', sans-serif; /* Fuente general */
+    color: #ffffff; /* Color del texto */
+    font-size: 1rem; /* Tamaño del texto */
+    text-align: left; /* Alineación del texto */
+}
+
+.texto-redes-sociales p {
+    margin-bottom: 40px; /* Espacio entre el texto y los íconos */
+}
+
+/* Contenedor de íconos de redes sociales */
+.iconos-redes-sociales {
+    display: flex;
+    flex-direction: column; /* Apilar los íconos verticalmente */
+    gap: 25px; /* Aumentamos el espacio entre los íconos a 15px */
+}
+
+/* Estilo para cada ícono de red social */
+.icono-red-social {
+    display: flex;
+    align-items: center; /* Centrar verticalmente el ícono y el texto */
+    gap: 10px; /* Espacio entre el ícono y el texto */
+    text-decoration: none; /* Sin subrayado */
+    color: #ffffff; /* Color del texto */
+    font-size: 1rem; /* Tamaño del texto */
+    transition: color 0.3s; /* Transición suave para el hover */
+}
+
+.icono-red-social:hover {
+    color: #FFC42B; /* Cambia el color al pasar el cursor */
+}
+
+/* Estilo para los íconos de Font Awesome */
+.icono-red-social i {
+    font-size: 1.2rem; /* Tamaño del ícono */
+}
+
+/* Estilo para el botón de enviar (igual al botón "Solicitar Review") */
+.boton-enviar {
+    position: relative; /* Posicionamiento relativo para los colores */
+    display: inline-block; /* Display en línea */
+    text-align: center; /* Alineación centrada del texto */
+    color: #000000; /* Color del texto en negro */
+    font-family: Arial, sans-serif; /* Familia de fuente */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+    width: 230px; /* Ancho del botón */
+    height: 60px; /* Altura del botón */
+    text-decoration: none; /* Sin subrayado */
+    line-height: 60px; /* Altura de línea igual a la altura del botón para centrar el texto verticalmente */
+    cursor: pointer; /* Cursor de puntero al pasar por encima */
+    background-color: #FFC42B; /* Color del centro inicial */
+    box-sizing: border-box; /* Asegura que el borde no altere el tamaño total */
+    border: 2px solid #080707; /* Borde negro de 2px usando border */
+    z-index: 0; /* Asegura que el borde esté detrás de los pseudo-elementos */
+}
+
+.boton-enviar::before,
+.boton-enviar::after,
+.boton-enviar span {
+    position: absolute; /* Posicionamiento absoluto para los colores */
+    left: 0;
+    right: 0;
+}
+
+.boton-enviar::before {
+    content: "";
+    top: 0;
+    height: 10%;
+    background-color: #FFD953; /* Color superior */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del span */
+}
+
+.boton-enviar::after {
+    content: "";
+    bottom: 0;
+    height: 10%;
+    background-color: #DB9F21; /* Color inferior */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del span */
+}
+
+.boton-enviar span {
+    top: 10%;
+    bottom: 10%;
+    background-color: #FFC42B; /* Color del centro */
+    z-index: 1; /* Coloca el texto encima de los colores */
+    display: flex; /* Utiliza flexbox para centrar el texto */
+    justify-content: center; /* Centro horizontal */
+    align-items: center; /* Centro vertical */
+    color: #000000; /* Asegura que el texto sea negro */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Asegura que el texto sea negrita */
+}
+
+.boton-enviar:hover span {
+    background-color: #FFE175; /* Cambia el color del centro al pasar el cursor */
+}
+
+
+/*                      FIN Sección Contacto                        */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*                  Sección Redes Sociales                  */
+
+/* Sección Redes Sociales */
+#redes-sociales {
+    background-color: #000000; /* Fondo negro */
+    padding: 20px 20px; /* Padding reducido */
+    text-align: center; /* Centrar el contenido */
+}
+
+.contenedor-redes {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor */
+}
+
+.titulo-redes {
+    font-family: 'Montserrat', sans-serif; /* Usar la fuente de la página */
+    font-size: 1.2rem; /* Tamaño del texto más pequeño */
+    color: #ffffff; /* Color del texto */
+    margin-bottom: 15px; /* Espaciado inferior reducido */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-weight: normal; /* Texto sin negrita */
+}
+
+.iconos-redes {
+    display: flex;
+    justify-content: center; /* Centrar los íconos horizontalmente */
+    gap: 15px; /* Espacio entre los íconos reducido */
+}
+
+.icono-red {
+    font-size: 1.2rem; /* Tamaño de los íconos más pequeño */
+    color: #ffffff; /* Color de los íconos */
+    background-color: #262423; /* Fondo circular */
+    width: 40px; /* Ancho del círculo más pequeño */
+    height: 40px; /* Alto del círculo más pequeño */
+    border-radius: 50%; /* Hacerlo circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el hover */
+    text-decoration: none; /* Quitar subrayado */
+}
+
+.icono-red:hover {
+    background-color: #FFC42B; /* Cambia el color de fondo al pasar el cursor */
+    color: #000000; /* Cambia el color del ícono al pasar el cursor */
+}
+
+
+/*                  FIN Sección Redes Sociales                  */
+
+
+
+
+
+
+
+
+
+
+
+
+/*                      Footer                      */
+
+footer {
+    background-color: #111111;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logos img {
+    height: 50px;
+    margin: 10px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.footer-column {
+    margin: 0 20px;
+    text-align: left;
+}
+
+.footer-column h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    display: block;
+    color: #8bc34a;
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.footer-esrb img {
+    margin-top: 20px;
+    height: 70px;
+}
+
+
+
+/*                      FIN Footer                      */
+
 
 
 
