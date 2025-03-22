@@ -11,6 +11,15 @@
     
 }
 
+/* Clase para evitar que las imágenes sean copiadas o arrastradas */
+.no-copy-drag {
+    user-select: none; /* Evita la selección de texto e imágenes */
+    -webkit-user-select: none; /* Para navegadores basados en WebKit (Chrome, Safari) */
+    -moz-user-select: none; /* Para Firefox */
+    -ms-user-select: none; /* Para Internet Explorer/Edge */
+    pointer-events: none; /* Evita que las imágenes sean arrastradas */
+}
+
 body {
     display: flex;
     flex-direction: column;

@@ -1,0 +1,438 @@
+/*                  Contenedor de la imagen de cabecera                  */
+.imagen-cabecera-container {
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    overflow: hidden;
+}
+
+.imagen-cabecera {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none; /* Evitar selección de texto */
+    pointer-events: none; /* Evitar interacciones como arrastrar */
+}
+
+/* Centrar el botón */
+.boton-centrado {
+    top: 80%;
+    position: absolute;
+    bottom: 20px; /* Ajusta la posición vertical del botón */
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+}
+
+/* Estilos para el botón de Shaders */
+.btn-shaders {
+    position: relative; /* Posicionamiento relativo para los colores */
+    display: inline-block; /* Display en línea */
+    text-align: center; /* Alineación centrada del texto */
+    color: #000000; /* Color del texto en negro */
+    font-family: Arial, sans-serif; /* Familia de fuente */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+    width: 230px; /* Ancho del botón */
+    height: 60px; /* Altura del botón */
+    text-decoration: none; /* Sin subrayado */
+    line-height: 60px; /* Altura de línea igual a la altura del botón para centrar el texto verticalmente */
+    cursor: pointer; /* Cursor de puntero al pasar por encima */
+    background-color: #bbf0fd; /* Color del centro inicial */
+    box-sizing: border-box; /* Asegura que el borde no altere el tamaño total */
+    border: 2px solid #262423; /* Borde de color #262423 */
+    z-index: 0; /* Asegura que el borde esté detrás de los pseudo-elementos */
+}
+
+.btn-shaders::before,
+.btn-shaders::after,
+.btn-shaders span {
+    position: absolute; /* Posicionamiento absoluto para los colores */
+    left: 0;
+    right: 0;
+}
+
+.btn-shaders::before {
+    content: "";
+    top: 0;
+    height: 10%;
+    background-color: #cff5fd; /* Color superior */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del span */
+}
+
+.btn-shaders::after {
+    content: "";
+    bottom: 0;
+    height: 10%;
+    background-color: #539ad2; /* Color inferior */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del span */
+}
+
+.btn-shaders span {
+    top: 10%;
+    bottom: 10%;
+    background-color: #bbf0fd; /* Color del centro */
+    z-index: 1; /* Coloca el texto encima de los colores */
+    display: flex; /* Utiliza flexbox para centrar el texto */
+    justify-content: center; /* Centro horizontal */
+    align-items: center; /* Centro vertical */
+    color: #000000; /* Asegura que el texto sea negro */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Asegura que el texto sea negrita */
+}
+
+.btn-shaders:hover span {
+    background-color: #c9f3fd; /* Cambia el color del centro al pasar el cursor */
+}
+
+
+/*                  FIN Contenedor de la imagen de cabecera                  */
+
+
+
+
+
+
+
+
+
+
+/*                  Sección Artículo Shaders                  */
+
+/* Estilos para la sección Artículo Shaders */
+#articulo-shaders {
+    text-align: center; /* Centrar todo el contenido */
+    padding: 0; /* Sin padding superior ni inferior */
+    background-color: #0b1926; /* Fondo de la sección */
+    color: #ffffff; /* Color del texto en blanco */
+}
+
+/* Imagen de separación con título */
+.separacion-titulos {
+    position: relative; /* Posicionamiento relativo para el título */
+    width: 100%; /* Ocupa el ancho de la página */
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+
+/* Imagen no seleccionable */
+.imagen-no-seleccionable {
+    width: 100%; /* Ocupa el ancho de la página */
+    height: auto; /* Altura automática */
+    display: block; /* Centrar la imagen */
+    user-select: none; /* Evitar selección de texto */
+    pointer-events: none; /* Evitar interacciones como arrastrar */
+}
+
+/* Título dentro de la imagen */
+.titulo-shaders {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 30%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustar al centro */
+    font-family: "Minecraft", sans-serif; /* Fuente Minecraft */
+    src: url(/assets/fonts/Minecraft.ttf); /* Ruta de la fuente */
+    color: #000000; /* Color del texto en negro */
+    font-size: 50px; /* Tamaño de la fuente más grande */
+    margin: 0; /* Sin margen */
+    font-weight: normal; /* Texto normal (no negrita) */
+    white-space: nowrap; /* Evitar salto de línea */
+}
+
+/* Plataformas disponibles */
+.plataformas-shaders {
+    margin-top: 0; /* Sin separación arriba */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* Título de plataformas */
+.titulo-plataformas {
+    font-family: "Minecraft", sans-serif; /* Fuente Minecraft */
+    src: url(/assets/fonts/Minecraft.ttf); /* Ruta de la fuente */
+    color: #ffffff; /* Color del texto en blanco */
+    font-size: 35px; /* Tamaño de la fuente más grande */
+    margin-bottom: 10px; /* Espaciado inferior */
+    font-weight: normal; /* Texto normal (no negrita) */
+}
+
+/* Descripción de plataformas */
+.descripcion-plataformas {
+    font-family: Arial, sans-serif; /* Fuente por defecto */
+    font-size: 16px; /* Tamaño de la fuente */
+    color: #ffffff; /* Color del texto en blanco */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Contenedor de íconos de plataformas */
+.iconos-plataformas {
+    display: flex; /* Flexbox para alinear íconos */
+    justify-content: center; /* Centrar horizontalmente */
+    gap: 50px; /* Espacio entre íconos (más grande) */
+    margin-bottom: 20px; /* Espaciado inferior */
+    padding: 0 20px; /* Espaciado interno para que no se vea apretado */
+}
+
+/* Estilos para cada ícono de plataforma */
+.icono-plataforma {
+    display: flex; /* Flexbox para alinear imagen y texto */
+    align-items: center; /* Centrar verticalmente */
+    gap: 10px; /* Separación entre imagen y texto */
+    text-align: left; /* Alinear texto a la izquierda */
+    border-top: 1px solid #ccc; /* Borde superior */
+    border-bottom: 1px solid #ccc; /* Borde inferior */
+    padding: 15px 20px; /* Espaciado interno más grande */
+}
+
+.icono-plataforma img {
+    width: 35px; /* Ancho del ícono más grande */
+    height: 35px; /* Altura del ícono más grande */
+}
+
+.icono-plataforma span {
+    font-family: Arial, sans-serif; /* Fuente por defecto */
+    font-size: 16px; /* Tamaño de la fuente */
+    color: #ffffff; /* Color del texto en blanco */
+}
+
+
+/*                  FIN Sección Artículo Shaders                  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*                  Sección Artículos-Página                  */
+
+#articulos-pagina {
+    padding: 40px 0; /* Padding superior e inferior */
+    background-color: #171615; /* Fondo de la sección */
+    text-align: center; /* Centrar todo el contenido */
+}
+
+/* Título "¿Como puedo obtener los Shaders?" */
+.titulo-articulo-blanco {
+    font-family: "Minecraft", sans-serif; /* Fuente Minecraft */
+    src: url(/assets/fonts/Minecraft.ttf); /* Ruta de la fuente */
+    color: #ffffff; /* Color del texto en blanco */
+    font-size: 50px; /* Tamaño de la fuente */
+    margin: 0; /* Sin margen */
+    font-weight: normal; /* Texto normal (no negrita) */
+}
+
+/* Subtítulo "¿Como puedo obtener los Shaders?" */
+.subtitulo-articulo-blanco {
+    font-family: Arial, sans-serif; /* Fuente por defecto */
+    font-size: 16px; /* Tamaño de la fuente reducido a 16px */
+    color: #ffffff; /* Color del texto en blanco */
+    margin: 0; /* Sin margen */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+/* Enlace a texture-packs.com */
+.link-texture-packs {
+    color: #74d2fa; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.link-texture-packs:hover {
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+/* Imagen de la sección */
+.imagen-articulo img {
+    width: 100%; /* Ocupa el ancho del contenedor */
+    max-width: 80%; /* Máximo ancho del 80% */
+    height: auto; /* Altura automática */
+    display: block; /* Centrar la imagen */
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+
+/* Título "TOP 1: Complementary Reimagined Shaders" */
+.titulo-articulo-azul {
+    font-family: "Minecraft", sans-serif; /* Fuente Minecraft */
+    src: url(/assets/fonts/Minecraft.ttf); /* Ruta de la fuente */
+    color: #74d2fa; /* Color del texto */
+    font-size: 32px; /* Tamaño de la fuente */
+    margin: 0; /* Sin margen */
+    font-weight: normal; /* Texto normal (no negrita) */
+    text-decoration: underline; /* Subrayado */
+}
+
+/* Subtítulo de la sección */
+.subtitulo-articulo {
+    font-family: Arial, sans-serif; /* Fuente por defecto */
+    font-size: 16px; /* Tamaño de la fuente */
+    color: #ffffff; /* Color del texto en blanco */
+    margin: 0; /* Sin margen */
+}
+
+/* Contenedor del botón */
+.boton-articulo {
+    margin-top: 20px; /* Espaciado superior */
+}
+
+/* Estilos para el botón de Artículos */
+.btn-articulo {
+    position: relative; /* Posicionamiento relativo para los colores */
+    display: inline-block; /* Display en línea */
+    text-align: center; /* Alineación centrada del texto */
+    color: #000000; /* Color del texto en negro */
+    font-family: Arial, sans-serif; /* Familia de fuente */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+    width: 230px; /* Ancho del botón */
+    height: 60px; /* Altura del botón */
+    text-decoration: none; /* Sin subrayado */
+    line-height: 60px; /* Altura de línea igual a la altura del botón para centrar el texto verticalmente */
+    cursor: pointer; /* Cursor de puntero al pasar por encima */
+    background-color: #bbf0fd; /* Color del centro inicial */
+    box-sizing: border-box; /* Asegura que el borde no altere el tamaño total */
+    border: 2px solid #262423; /* Borde de color #262423 */
+    z-index: 0; /* Asegura que el borde esté detrás de los pseudo-elementos */
+}
+
+.btn-articulo::before,
+.btn-articulo::after,
+.btn-articulo span {
+    position: absolute; /* Posicionamiento absoluto para los colores */
+    left: 0;
+    right: 0;
+}
+
+.btn-articulo::before {
+    content: "";
+    top: 0;
+    height: 10%;
+    background-color: #cff5fd; /* Color superior */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del span */
+}
+
+.btn-articulo::after {
+    content: "";
+    bottom: 0;
+    height: 10%;
+    background-color: #539ad2; /* Color inferior */
+    z-index: -1; /* Coloca el pseudo-elemento detrás del span */
+}
+
+.btn-articulo span {
+    top: 10%;
+    bottom: 10%;
+    background-color: #bbf0fd; /* Color del centro */
+    z-index: 1; /* Coloca el texto encima de los colores */
+    display: flex; /* Utiliza flexbox para centrar el texto */
+    justify-content: center; /* Centro horizontal */
+    align-items: center; /* Centro vertical */
+    color: #000000; /* Asegura que el texto sea negro */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Asegura que el texto sea negrita */
+}
+
+.btn-articulo:hover span {
+    background-color: #c9f3fd; /* Cambia el color del centro al pasar el cursor */
+}
+
+/*                  FIN Sección Artículos-Página                  */
+
+
+
+
+
+
+
+
+
+
+/*                  Sección ¿Aún no?                  */
+
+#aun-no {
+    background-color: #74d2fa; /* Color exacto */
+    text-align: center; /* Centrar todo el contenido */
+    padding-bottom: 40px; /* Padding inferior */
+}
+
+/* Imagen de separación */
+.separacion-aunno img {
+    width: 100%; /* Ocupa el ancho de la página */
+    height: auto; /* Altura automática */
+    display: block; /* Centrar la imagen */
+    user-select: none; /* Evitar selección de texto */
+    pointer-events: none; /* Evitar interacciones como arrastrar */
+}
+
+/* Título de la sección */
+.titulo-aunno {
+    font-family: "Minecraft", sans-serif; /* Fuente Minecraft */
+    src: url(/assets/fonts/Minecraft.ttf); /* Ruta de la fuente */
+    color: #000000; /* Color del texto en negro */
+    font-size: 45px; /* Tamaño de la fuente */
+    margin: 40px 0; /* Espaciado superior e inferior */
+    font-weight: normal; /* Texto normal (no negrita) */
+}
+
+/* Contenedor de las secciones */
+.contenido-aunno {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el contenido */
+    padding: 0 20px; /* Padding lateral */
+}
+
+/* Contenedor para las secciones (flexbox) */
+.secciones-container {
+    display: flex; /* Flexbox para alinear las secciones */
+    justify-content: space-between; /* Espacio entre secciones */
+    gap: 20px; /* Separación entre secciones */
+    flex-wrap: wrap; /* Permitir que las secciones se ajusten en pantallas pequeñas */
+}
+
+/* Estilos para cada sección */
+.seccion-aunno {
+    width: 30%; /* Ancho de cada sección */
+    margin-bottom: 40px; /* Espaciado inferior */
+}
+
+/* Estilos para las imágenes */
+.imagen-seccion {
+    width: 80%; /* Reducir el ancho de la imagen al 80% */
+    height: auto; /* Altura automática */
+    display: block; /* Centrar la imagen */
+    margin: 0 auto; /* Centrar horizontalmente */
+    user-select: none; /* Evitar selección de texto */
+    pointer-events: none; /* Evitar interacciones como arrastrar */
+    border: 4px solid transparent; /* Borde transparente por defecto */
+    transition: border-color 0.3s ease; /* Transición suave del borde */
+}
+
+/* Efecto de borde al pasar el cursor */
+.imagen-link:hover .imagen-seccion {
+    border-left: 4px solid #ffffff; /* Borde izquierdo blanco */
+    border-top: 4px solid #ffffff; /* Borde superior blanco */
+    border-right: 4px solid #cdcdcd; /* Borde derecho gris */
+    border-bottom: 4px solid #cdcdcd; /* Borde inferior gris */
+}
+
+/* Título de cada sección */
+.titulo-seccion-aunno {
+    font-family: "Minecraft", sans-serif; /* Fuente Minecraft */
+    src: url(/assets/fonts/Minecraft.ttf); /* Ruta de la fuente */
+    color: #000000; /* Color del texto en negro */
+    font-size: 32px; /* Tamaño de la fuente */
+    margin: 20px 0 10px; /* Espaciado superior e inferior */
+    font-weight: normal; /* Texto normal (no negrita) */
+}
+
+/* Subtítulo de cada sección */
+.subtitulo-seccion-aunno {
+    font-family: Arial, sans-serif; /* Fuente por defecto */
+    font-size: 18px; /* Tamaño de la fuente */
+    color: #000000; /* Color del texto en negro */
+    margin: 0; /* Sin margen */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
