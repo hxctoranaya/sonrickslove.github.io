@@ -1,0 +1,301 @@
+/* Evitar desbordamiento horizontal en toda la página */
+body {
+    overflow-x: hidden; /* Oculta el scroll horizontal */
+    width: 100%; /* Asegura que el ancho no exceda el 100% */
+}
+
+/* Estilos generales para dispositivos móviles */
+@media (max-width: 767px) {
+    /* Ajustes para la imagen de cabecera */
+    .imagen-cabecera-container {
+        height: 50vh; /* Reducir la altura en dispositivos móviles */
+    }
+
+    .boton-centrado {
+        top: 70%; /* Ajustar la posición del botón */
+    }
+
+    /* Ajustes para el título de Shaders */
+    .titulo-shaders {
+        font-size: 30px; /* Reducir el tamaño del título */
+        top: 20%; /* Ajustar la posición vertical */
+    }
+
+    /* Ajustes para las plataformas disponibles */
+    .plataformas-shaders {
+        padding: 10px; /* Reducir el padding */
+    }
+
+    .titulo-plataformas {
+        font-size: 25px; /* Reducir el tamaño del título */
+    }
+
+    .iconos-plataformas {
+        flex-direction: column; /* Apilar íconos verticalmente */
+        gap: 20px; /* Reducir el espacio entre íconos */
+        padding: 0 10px; /* Añadir padding para evitar desbordamiento */
+    }
+
+    .icono-plataforma {
+        width: 100%; /* Ocupar todo el ancho */
+        padding: 10px; /* Reducir el padding */
+        box-sizing: border-box; /* Incluir padding en el ancho total */
+    }
+
+    /* Ajustes para los artículos */
+    .titulo-articulo-blanco {
+        font-size: 30px; /* Reducir el tamaño del título */
+    }
+
+    .subtitulo-articulo-blanco {
+        font-size: 14px; /* Reducir el tamaño del subtítulo */
+    }
+
+    .imagen-articulo img {
+        max-width: 100%; /* Ajustar el ancho de la imagen */
+    }
+
+    .titulo-articulo-azul {
+        font-size: 25px; /* Reducir el tamaño del título */
+    }
+
+    .subtitulo-articulo {
+        font-size: 14px; /* Reducir el tamaño del subtítulo */
+    }
+
+    .btn-articulo {
+        width: 100%; /* Ocupar todo el ancho */
+        font-size: 16px; /* Reducir el tamaño de la fuente */
+    }
+
+    /* Ajustes para la sección "¿Aún no?" */
+    .titulo-aunno {
+        font-size: 30px; /* Reducir el tamaño del título */
+    }
+
+    .secciones-container {
+        flex-direction: column; /* Apilar secciones verticalmente */
+    }
+
+    .seccion-aunno {
+        width: 100%; /* Ocupar todo el ancho */
+    }
+
+    .imagen-seccion {
+        width: 100%; /* Ocupar todo el ancho */
+    }
+
+    .titulo-seccion-aunno {
+        font-size: 25px; /* Reducir el tamaño del título */
+    }
+
+    .subtitulo-seccion-aunno {
+        font-size: 14px; /* Reducir el tamaño del subtítulo */
+    }
+
+    /* Ajustes para el footer */
+    .footer-links {
+        flex-direction: column; /* Apilar enlaces verticalmente */
+    }
+
+    .footer-column {
+        margin: 10px 0; /* Reducir el margen */
+    }
+}
+
+/* Estilos para tablets (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Ajustes para la imagen de cabecera */
+    .imagen-cabecera-container {
+        height: 60vh; /* Ajustar la altura */
+    }
+
+    .boton-centrado {
+        top: 75%; /* Ajustar la posición del botón */
+    }
+
+    /* Ajustes para el título de Shaders */
+    .titulo-shaders {
+        font-size: 40px; /* Ajustar el tamaño del título */
+        top: 25%; /* Ajustar la posición vertical */
+    }
+
+    /* Ajustes para las plataformas disponibles */
+    .plataformas-shaders {
+        padding: 15px; /* Ajustar el padding */
+    }
+
+    .titulo-plataformas {
+        font-size: 30px; /* Ajustar el tamaño del título */
+    }
+
+    .iconos-plataformas {
+        gap: 30px; /* Ajustar el espacio entre íconos */
+        padding: 0 15px; /* Añadir padding para evitar desbordamiento */
+    }
+
+    .icono-plataforma {
+        padding: 15px; /* Ajustar el padding */
+        box-sizing: border-box; /* Incluir padding en el ancho total */
+    }
+
+    /* Ajustes para los artículos */
+    .titulo-articulo-blanco {
+        font-size: 40px; /* Ajustar el tamaño del título */
+    }
+
+    .subtitulo-articulo-blanco {
+        font-size: 16px; /* Ajustar el tamaño del subtítulo */
+    }
+
+    .imagen-articulo img {
+        max-width: 90%; /* Ajustar el ancho de la imagen */
+    }
+
+    .titulo-articulo-azul {
+        font-size: 30px; /* Ajustar el tamaño del título */
+    }
+
+    .subtitulo-articulo {
+        font-size: 16px; /* Ajustar el tamaño del subtítulo */
+    }
+
+    .btn-articulo {
+        width: 80%; /* Ajustar el ancho del botón */
+        font-size: 18px; /* Ajustar el tamaño de la fuente */
+    }
+
+    /* Ajustes para la sección "¿Aún no?" */
+    .titulo-aunno {
+        font-size: 40px; /* Ajustar el tamaño del título */
+    }
+
+    .secciones-container {
+        gap: 30px; /* Ajustar el espacio entre secciones */
+    }
+
+    .seccion-aunno {
+        width: 45%; /* Ajustar el ancho de las secciones */
+    }
+
+    .imagen-seccion {
+        width: 90%; /* Ajustar el ancho de la imagen */
+    }
+
+    .titulo-seccion-aunno {
+        font-size: 30px; /* Ajustar el tamaño del título */
+    }
+
+    .subtitulo-seccion-aunno {
+        font-size: 16px; /* Ajustar el tamaño del subtítulo */
+    }
+
+    /* Ajustes para el footer */
+    .footer-links {
+        flex-direction: row; /* Mostrar enlaces en fila */
+        flex-wrap: wrap; /* Permitir que los enlaces se ajusten */
+    }
+
+    .footer-column {
+        width: 45%; /* Ajustar el ancho de las columnas */
+        margin: 10px; /* Ajustar el margen */
+    }
+}
+
+/* Estilos para escritorios (más de 1024px) */
+@media (min-width: 1025px) {
+    /* Ajustes para la imagen de cabecera */
+    .imagen-cabecera-container {
+        height: 70vh; /* Ajustar la altura */
+    }
+
+    .boton-centrado {
+        top: 80%; /* Ajustar la posición del botón */
+    }
+
+    /* Ajustes para el título de Shaders */
+    .titulo-shaders {
+        font-size: 50px; /* Ajustar el tamaño del título */
+        top: 30%; /* Ajustar la posición vertical */
+    }
+
+    /* Ajustes para las plataformas disponibles */
+    .plataformas-shaders {
+        padding: 20px; /* Ajustar el padding */
+    }
+
+    .titulo-plataformas {
+        font-size: 35px; /* Ajustar el tamaño del título */
+    }
+
+    .iconos-plataformas {
+        gap: 50px; /* Ajustar el espacio entre íconos */
+        padding: 0 20px; /* Añadir padding para evitar desbordamiento */
+    }
+
+    .icono-plataforma {
+        padding: 20px; /* Ajustar el padding */
+        box-sizing: border-box; /* Incluir padding en el ancho total */
+    }
+
+    /* Ajustes para los artículos */
+    .titulo-articulo-blanco {
+        font-size: 50px; /* Ajustar el tamaño del título */
+    }
+
+    .subtitulo-articulo-blanco {
+        font-size: 18px; /* Ajustar el tamaño del subtítulo */
+    }
+
+    .imagen-articulo img {
+        max-width: 80%; /* Ajustar el ancho de la imagen */
+    }
+
+    .titulo-articulo-azul {
+        font-size: 32px; /* Ajustar el tamaño del título */
+    }
+
+    .subtitulo-articulo {
+        font-size: 18px; /* Ajustar el tamaño del subtítulo */
+    }
+
+    .btn-articulo {
+        width: 230px; /* Ajustar el ancho del botón */
+        font-size: 18px; /* Ajustar el tamaño de la fuente */
+    }
+
+    /* Ajustes para la sección "¿Aún no?" */
+    .titulo-aunno {
+        font-size: 45px; /* Ajustar el tamaño del título */
+    }
+
+    .secciones-container {
+        gap: 50px; /* Ajustar el espacio entre secciones */
+    }
+
+    .seccion-aunno {
+        width: 30%; /* Ajustar el ancho de las secciones */
+    }
+
+    .imagen-seccion {
+        width: 80%; /* Ajustar el ancho de la imagen */
+    }
+
+    .titulo-seccion-aunno {
+        font-size: 32px; /* Ajustar el tamaño del título */
+    }
+
+    .subtitulo-seccion-aunno {
+        font-size: 18px; /* Ajustar el tamaño del subtítulo */
+    }
+
+    /* Ajustes para el footer */
+    .footer-links {
+        flex-direction: row; /* Mostrar enlaces en fila */
+    }
+
+    .footer-column {
+        width: 30%; /* Ajustar el ancho de las columnas */
+        margin: 20px; /* Ajustar el margen */
+    }
+}
