@@ -1,0 +1,219 @@
+/*        Textos       */
+
+u{
+    color: blueviolet;
+}
+
+.fuentetitulos{
+    font-family: "Minecrafter";
+    src:url(/assets/fonts/Minecrafter.Alt.ttf); 
+    color: #000000;
+}
+
+.fuentesubtitulos{
+    font-family: "Minecraft";
+    src: url(/assets/fonts/Minecraft.ttf);
+    color: #000000;
+}
+.fuentesubtitulos-morado{
+    font-weight: 600;
+    background: linear-gradient(90deg, rgb(159, 45, 235), rgb(81, 0, 135)) text;
+    -webkit-text-fill-color: transparent;
+}
+.fuentesubrayada{
+    text-decoration: underline;
+}
+
+.finarticulo-items{
+    padding-left: 39%;
+}
+
+
+
+
+
+
+
+/*     Aside     */
+
+.aside{
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    margin: 0px;
+    padding: 3% 0px 100% 10%;
+    width: 29.8%;
+    height: 100%;
+    color: #000;
+    float: left;
+}
+
+
+
+
+
+
+
+/*     Body Artículos     */
+
+.autor-logo{
+    border: 3px solid #000;
+    
+}
+
+
+.articulos{
+    padding-top: 3%;
+}
+
+.articulos2{
+    position:absolute;
+    top: 81%;
+    left: 19.8%;
+}
+
+
+
+
+
+/*      Botones personalizados       */
+
+.btn-img{
+    border: 0px;
+    background-image: url("../img/Boton-Pagina-IMG.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 246px;
+    height: 60px;
+    color: #ffffff;
+}
+
+.btn-img:hover{
+    border: 0px;
+    background-image: url("../img/Boton-Pagina-IMG2.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 246px;
+    height: 60px;
+    color: #ffffff;
+}
+
+.btn-img-naranja{
+    border: 0px;
+    background-image: url("../img/Boton-Pagina-Naranja-IMG.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 246px;
+    height: 60px;
+    color: #ffffff;
+}
+
+.btn-img-naranja:hover{
+    border: 0px;
+    background-image: url("../img/Boton-Pagina-Naranja2-IMG.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 246px;
+    height: 60px;
+    color: #ffffff;
+}
+
+.btn-img-verde{
+    border: 0px;
+    background-image: url("../img/Boton-Pagina-IMG-Verde.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 246px;
+    height: 60px;
+    color: #ffffff;
+}
+
+.btn-img-verde:hover{
+    border: 0px;
+    background-image: url("../img/Boton-Pagina-IMG-Verde2.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 246px;
+    height: 60px;
+    color: #ffffff;
+}
+
+/*      Boton Redes       */
+
+.btn-img-redes-instagram{
+    border: 0px;
+    background-color: #ffffff;
+    background-image: url("/article-minecraft/insta_boton.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 240px;
+    height: 70px;
+    color: #ffffff;
+}
+
+.btn-img-redes-x{
+    border: 0px;
+    background-color: #ffffff;
+    background-image: url("/article-minecraft/x_boton.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 240px;
+    height: 70px;
+    color: #ffffff;
+}
+
+.btn-img-redes-facebook{
+    border: 0px;
+    background-color: #ffffff;
+    background-image: url("/article-minecraft/facebook_boton.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 240px;
+    height: 70px;
+    color: #ffffff;
+}
+
+.btn-img-redes-youtube{
+    border: 0px;
+    background-color: #ffffff;
+    background-image: url("/article-minecraft/youtube_logo.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 240px;
+    height: 70px;
+    color: #ffffff;
+}
+
+.btn-img-redes-youtube2{
+    border: 0px;
+    background-color: #ffffff;
+    background-image: url("/article-minecraft/youtube2_logo.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 240px;
+    height: 70px;
+    color: #ffffff;
+}
+
+.btn-img-redes-tiktok{
+    border: 0px;
+    background-color: #ffffff;
+    background-image: url("/article-minecraft/tiktok_logo.png");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: 100%;
+    width: 240px;
+    height: 70px;
+    color: #ffffff;
+}

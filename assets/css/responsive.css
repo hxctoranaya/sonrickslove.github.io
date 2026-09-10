@@ -1,0 +1,392 @@
+/* Estilos generales para móviles */
+@media (max-width: 767px) {
+    /* Ajustes para el navbar */
+    .navbar {
+        padding: 10px 10px;
+    }
+
+    .navbar-center {
+        display: none; /* Ocultar el menú central en móviles */
+    }
+
+    .navbar-right {
+        gap: 5px;
+    }
+
+    .navbar-right a:first-child {
+        display: none; /* Ocultar el texto "BUSCAR" */
+    }
+
+    /* Ajustes para el botón "Solicitar Review" */
+    .btn-nav {
+        width: 160px; /* Ancho ligeramente más grande */
+        height: 45px; /* Altura ligeramente más grande */
+        font-size: 12px; /* Texto un poquito más pequeño */
+        line-height: 45px; /* Ajustar la altura de línea */
+    }
+
+    .btn-nav span {
+        font-size: 12px; /* Asegurar que el texto sea más pequeño */
+    }
+
+    /* Ajustes para la sección de contratar */
+    #contratar {
+        padding: 20px 10px;
+    }
+
+    .fuentetitulos {
+        font-size: 2rem;
+    }
+
+    .store {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .card .coins {
+        font-size: 24px;
+    }
+
+    .card .extra {
+        font-size: 12px;
+    }
+
+    .card .price {
+        font-size: 16px;
+    }
+
+    /* Ajustes para la sección de colaboraciones */
+    .fuentetitulos-difuminado-centrado {
+        font-size: 2.5rem;
+        white-space: normal;
+        line-height: 1.2;
+    }
+
+    .texto-colaboraciones .primera-parte {
+        font-size: 0.9rem;
+        white-space: normal;
+        text-align: center;
+        margin-left: 0;
+        display: block;
+    }
+
+    .texto-colaboraciones .pregunta {
+        font-size: 0.9rem;
+        white-space: normal;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .contenido-colaboraciones {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cuadro-colaboraciones {
+        width: 100%;
+    }
+
+    /* Ajustes para la sección de top servers */
+    .contenido-top-servers {
+        flex-direction: column;
+    }
+
+    .imagen-top-servers {
+        margin-left: 0;
+    }
+
+    .parte-izquierda {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .parte-derecha {
+        margin-left: -150%;
+        order: 2;
+        width: 100%;
+        padding: 100%;
+    }
+
+    /* Ajustes para el cuadro "reserva-paypal" */
+    .reserva-paypal {
+        width: 70%;
+        margin-top: -10px;
+        padding: 5px;
+        box-sizing: border-box;
+        overflow: visible;
+        position: absolute;
+        text-align: center;
+    }
+
+    /* Ajustes para el formulario de PayPal */
+    .reserva-paypal form {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .reserva-paypal table {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .reserva-paypal select,
+    .reserva-paypal input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    .reserva-paypal input[type="image"] {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .reserva-paypal h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .reserva-paypal .nuevo-world-autor {
+        margin-bottom: 15px;
+    }
+
+    .reserva-paypal .nuevo-world {
+        font-size: 0.9rem;
+    }
+
+    .reserva-paypal .nuevo-estrellas,
+    .reserva-paypal .nuevo-monedita {
+        display: none;
+    }
+
+    /* Ajustes para el texto "Aparta tu lugar..." */
+    .fuentetitulos-difuminado {
+        font-size: 1.8rem;
+    }
+
+    .texto-pequeno {
+        font-size: 0.9rem;
+    }
+
+    /* Ajustes para la sección de contacto */
+    .seccion-contacto-redes {
+        flex-direction: column;
+    }
+
+    .contenedor-texto {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .texto-contacto, .texto-redes {
+        font-size: 2rem;
+    }
+
+    .fila-formulario {
+        flex-direction: column;
+    }
+
+    .campo-formulario {
+        width: 100%;
+    }
+
+    /* Ajustes para el footer */
+    .footer-links {
+        flex-direction: column;
+    }
+
+    .footer-column {
+        margin: 10px 0;
+    }
+
+    /* Ajustes para los cuadros de recursos */
+    .contenedor-cuadros-recursos {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .cuadro-recurso {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .texto-debajo-shaders,
+    .texto-debajo-texturas {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        position: static;
+        left: 0;
+    }
+
+    .texto-debajo-shaders {
+        order: 2;
+    }
+
+    .texto-debajo-texturas {
+        order: 4;
+    }
+
+    .cuadro-recurso:first-child {
+        order: 1;
+    }
+
+    .cuadro-recurso:last-child {
+        order: 3;
+    }
+
+    /* Ajustes para el texto "Tops Shaders / Texture Packs Mensuales" */
+    .titulo-tops-recursos {
+        font-size: 1.8rem;
+        white-space: normal;
+        line-height: 1.2;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .texto-tops-recursos {
+        font-size: 0.9rem;
+        white-space: normal;
+        text-align: center;
+        padding: 0 10px;
+    }
+}
+
+/* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Ajustes para el navbar */
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .navbar-center {
+        gap: 20px;
+    }
+
+    .navbar-center li a {
+        font-size: 11px;
+    }
+
+    .navbar-right {
+        gap: 15px;
+    }
+
+    .navbar-right a {
+        font-size: 11px;
+    }
+
+    .btn-nav {
+        width: 180px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 50px;
+    }
+
+    /* Ajustes para la sección de contratar */
+    #contratar {
+        padding: 30px 15px;
+    }
+
+    .fuentetitulos {
+        font-size: 2.5rem;
+    }
+
+    .store {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .card {
+        width: 48%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .card .coins {
+        font-size: 28px;
+    }
+
+    .card .extra {
+        font-size: 14px;
+    }
+
+    .card .price {
+        font-size: 18px;
+    }
+
+    /* Ajustes para la sección de colaboraciones */
+    .contenido-colaboraciones {
+        gap: 30px;
+    }
+
+    .cuadro-colaboraciones {
+        width: 48%;
+    }
+
+    /* Ajustes para la sección de top servers */
+    .contenido-top-servers {
+        flex-direction: column;
+    }
+
+    .imagen-top-servers {
+        margin-left: 0;
+    }
+
+    .parte-izquierda {
+        margin-left: 0;
+    }
+
+    .parte-derecha {
+        margin-left: 0;
+    }
+
+    .reserva-paypal {
+        width: 100%;
+    }
+
+    /* Ajustes para la sección de contacto */
+    .seccion-contacto-redes {
+        flex-direction: column;
+    }
+
+    .contenedor-texto {
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    .texto-contacto, .texto-redes {
+        font-size: 2.5rem;
+    }
+
+    .fila-formulario {
+        flex-direction: column;
+    }
+
+    .campo-formulario {
+        width: 100%;
+    }
+
+    /* Ajustes para el footer */
+    .footer-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .footer-column {
+        margin: 10px 20px;
+    }
+}
+
+/* Estilos para escritorios */
+@media (min-width: 1024px) {
+    /* Aquí puedes agregar ajustes específicos para pantallas grandes si es necesario */
+}
